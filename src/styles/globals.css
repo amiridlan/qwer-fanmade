@@ -1,0 +1,89 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* ─── Base resets ─── */
+@layer base {
+  *,
+  *::before,
+  *::after {
+    box-sizing: border-box;
+  }
+
+  html {
+    scroll-behavior: smooth;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  body {
+    @apply bg-qwer-black text-qwer-white font-body;
+    min-height: 100dvh;
+    overflow-x: hidden;
+  }
+
+  /* Headings default to display font */
+  h1, h2, h3 {
+    @apply font-display tracking-display;
+  }
+
+  /* Scrollbar styling */
+  ::-webkit-scrollbar {
+    width: 4px;
+  }
+  ::-webkit-scrollbar-track {
+    @apply bg-qwer-black;
+  }
+  ::-webkit-scrollbar-thumb {
+    @apply bg-qwer-crimson rounded-full;
+  }
+
+  /* Selection color */
+  ::selection {
+    background-color: rgba(193, 39, 45, 0.4);
+    color: #F4F0E8;
+  }
+}
+
+/* ─── Utility classes ─── */
+@layer utilities {
+  /* Section eyebrow label */
+  .label-meta {
+    @apply text-xs font-body font-medium tracking-meta uppercase text-qwer-gray;
+  }
+
+  /* Crimson underline accent */
+  .underline-crimson {
+    position: relative;
+  }
+  .underline-crimson::after {
+    content: '';
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+    width: 0;
+    height: 2px;
+    @apply bg-qwer-crimson;
+    transition: width 150ms ease-out;
+  }
+  .underline-crimson:hover::after {
+    width: 100%;
+  }
+
+  /* Member color glow utility — applied via inline style */
+  .member-glow {
+    box-shadow: 0 0 20px -4px var(--member-color, #C1272D);
+    border-color: var(--member-color, #C1272D);
+    transition: box-shadow 150ms ease-out, border-color 150ms ease-out;
+  }
+
+  /* Noise texture overlay */
+  .noise-overlay::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.04'/%3E%3C/svg%3E");
+    pointer-events: none;
+    z-index: 0;
+  }
+}

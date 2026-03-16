@@ -1,0 +1,59 @@
+{
+  "nav": {
+    "home": "Utama",
+    "members": "Ahli",
+    "music": "Muzik",
+    "live": "Pentas",
+    "bawige": "Bawige",
+    "about": "Tentang"
+  },
+  "hero": {
+    "tagline": "Harmoni dari Percanggahan",
+    "subtitle": "Kumpulan rock K-pop · Tamago Production · 2023–",
+    "cta_music": "Keluaran Terbaru",
+    "cta_tour": "Jadual Konsert"
+  },
+  "members": {
+    "title": "Ahli",
+    "subtitle": "Empat orang. Satu kumpulan.",
+    "chodan_role": "Pemain Dram · Ketua · Sub-vokal",
+    "magenta_role": "Pemain Bas",
+    "hina_role": "Pemain Gitar · Pemain Kibod · Maknae",
+    "siyeon_role": "Vokal Utama · Pemain Gitar"
+  },
+  "music": {
+    "title": "Diskografi",
+    "subtitle": "Semua keluaran",
+    "filter_all": "Semua",
+    "filter_album": "Album",
+    "filter_ep": "EP",
+    "filter_single": "Single"
+  },
+  "live": {
+    "title": "Pentas",
+    "subtitle": "Di atas pentas",
+    "upcoming": "Konsert Akan Datang",
+    "past": "Konsert Lalu",
+    "no_upcoming": "Tiada konsert akan datang. Semak semula nanti."
+  },
+  "bawige": {
+    "title": "Bawige",
+    "subtitle": "바위게 · Scuttle Crab",
+    "disclaimer": "Ini adalah laman web buatan peminat. QWER dan semua tanda dagangan berkaitan adalah milik Tamago Production dan 3Y Corporation. Tidak bergabung atau disokong oleh QWER atau pengurusan mereka."
+  },
+  "about": {
+    "title": "Kisah Kami",
+    "subtitle": "Harmoni dari Percanggahan",
+    "disclaimer": "Laman buatan peminat · Tidak berkaitan dengan QWER atau Tamago Production"
+  },
+  "footer": {
+    "disclaimer": "Laman buatan peminat · Tidak berkaitan dengan QWER atau Tamago Production · QWER © 3Y Corporation",
+    "fan_note": "Dibuat dengan kasih sayang oleh komuniti bawige"
+  },
+  "language": {
+    "en": "EN",
+    "ko": "KR",
+    "ms": "MY",
+    "ja": "JP"
+  }
+}

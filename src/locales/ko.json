@@ -1,0 +1,59 @@
+{
+  "nav": {
+    "home": "홈",
+    "members": "멤버",
+    "music": "음악",
+    "live": "라이브",
+    "bawige": "바위게",
+    "about": "소개"
+  },
+  "hero": {
+    "tagline": "불협화음에서 화음으로",
+    "subtitle": "K-팝 록 밴드 · 타마고 프로덕션 · 2023–",
+    "cta_music": "최신 앨범",
+    "cta_tour": "공연 일정"
+  },
+  "members": {
+    "title": "멤버",
+    "subtitle": "네 사람. 하나의 밴드.",
+    "chodan_role": "드러머 · 리더 · 서브보컬",
+    "magenta_role": "베이시스트",
+    "hina_role": "기타리스트 · 키보디스트 · 막내",
+    "siyeon_role": "메인보컬 · 기타리스트"
+  },
+  "music": {
+    "title": "디스코그래피",
+    "subtitle": "전체 발매작",
+    "filter_all": "전체",
+    "filter_album": "앨범",
+    "filter_ep": "EP",
+    "filter_single": "싱글"
+  },
+  "live": {
+    "title": "라이브",
+    "subtitle": "무대 위에서",
+    "upcoming": "예정된 공연",
+    "past": "지난 공연",
+    "no_upcoming": "예정된 공연이 없습니다. 곧 업데이트될 예정입니다."
+  },
+  "bawige": {
+    "title": "바위게",
+    "subtitle": "바위게 · 팬덤",
+    "disclaimer": "이 웹사이트는 팬 제작 사이트입니다. QWER 및 관련 상표는 타마고 프로덕션 및 3Y Corporation에 속합니다. QWER 또는 소속사와 무관합니다."
+  },
+  "about": {
+    "title": "우리의 이야기",
+    "subtitle": "불협화음에서 화음으로",
+    "disclaimer": "팬 제작 사이트 · QWER 또는 타마고 프로덕션과 무관"
+  },
+  "footer": {
+    "disclaimer": "팬 제작 사이트 · QWER 또는 타마고 프로덕션과 무관 · QWER © 3Y Corporation",
+    "fan_note": "바위게 커뮤니티가 사랑을 담아 만들었습니다"
+  },
+  "language": {
+    "en": "EN",
+    "ko": "KR",
+    "ms": "MY",
+    "ja": "JP"
+  }
+}

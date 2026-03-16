@@ -1,0 +1,59 @@
+{
+  "nav": {
+    "home": "ホーム",
+    "members": "メンバー",
+    "music": "音楽",
+    "live": "ライブ",
+    "bawige": "バウィゲ",
+    "about": "概要"
+  },
+  "hero": {
+    "tagline": "不協和から調和へ",
+    "subtitle": "K-popロックバンド · タマゴプロダクション · 2023–",
+    "cta_music": "最新リリース",
+    "cta_tour": "ツアー日程"
+  },
+  "members": {
+    "title": "メンバー",
+    "subtitle": "4人。1つのバンド。",
+    "chodan_role": "ドラマー · リーダー · サブボーカル",
+    "magenta_role": "ベーシスト",
+    "hina_role": "ギタリスト · キーボーディスト · マンネ",
+    "siyeon_role": "メインボーカル · ギタリスト"
+  },
+  "music": {
+    "title": "ディスコグラフィー",
+    "subtitle": "全リリース",
+    "filter_all": "すべて",
+    "filter_album": "アルバム",
+    "filter_ep": "EP",
+    "filter_single": "シングル"
+  },
+  "live": {
+    "title": "ライブ",
+    "subtitle": "ステージで",
+    "upcoming": "今後のライブ",
+    "past": "過去のライブ",
+    "no_upcoming": "予定されているライブはありません。後ほど確認してください。"
+  },
+  "bawige": {
+    "title": "バウィゲ",
+    "subtitle": "바위게 · スカトルクラブ",
+    "disclaimer": "このウェブサイトはファンメイドです。QWERおよび関連する商標はタマゴプロダクションおよび3Y Corporationに帰属します。QWERまたはそのマネジメントとは無関係です。"
+  },
+  "about": {
+    "title": "私たちの物語",
+    "subtitle": "不協和から調和へ",
+    "disclaimer": "ファンメイドサイト · QWERまたはタマゴプロダクションとは無関係"
+  },
+  "footer": {
+    "disclaimer": "ファンメイドサイト · QWERまたはタマゴプロダクションとは無関係 · QWER © 3Y Corporation",
+    "fan_note": "バウィゲコミュニティが愛を込めて制作"
+  },
+  "language": {
+    "en": "EN",
+    "ko": "KR",
+    "ms": "MY",
+    "ja": "JP"
+  }
+}

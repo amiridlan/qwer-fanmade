@@ -1,0 +1,59 @@
+{
+  "nav": {
+    "home": "Home",
+    "members": "Members",
+    "music": "Music",
+    "live": "Live",
+    "bawige": "Bawige",
+    "about": "About"
+  },
+  "hero": {
+    "tagline": "Harmony from Discord",
+    "subtitle": "K-pop rock band · Tamago Production · 2023–",
+    "cta_music": "Latest Release",
+    "cta_tour": "Tour Dates"
+  },
+  "members": {
+    "title": "Members",
+    "subtitle": "Four people. One band.",
+    "chodan_role": "Drummer · Leader · Sub-vocalist",
+    "magenta_role": "Bassist",
+    "hina_role": "Guitarist · Keyboardist · Maknae",
+    "siyeon_role": "Main Vocalist · Guitarist"
+  },
+  "music": {
+    "title": "Discography",
+    "subtitle": "All releases",
+    "filter_all": "All",
+    "filter_album": "Albums",
+    "filter_ep": "EPs",
+    "filter_single": "Singles"
+  },
+  "live": {
+    "title": "Live",
+    "subtitle": "On stage",
+    "upcoming": "Upcoming Shows",
+    "past": "Past Shows",
+    "no_upcoming": "No upcoming shows. Check back soon."
+  },
+  "bawige": {
+    "title": "Bawige",
+    "subtitle": "바위게 · Scuttle Crab",
+    "disclaimer": "This is a fan-made website. QWER and all associated trademarks belong to Tamago Production and 3Y Corporation. Not affiliated with or endorsed by QWER or their management."
+  },
+  "about": {
+    "title": "Our Story",
+    "subtitle": "Harmony from Discord",
+    "disclaimer": "Fan-made site · Not affiliated with QWER or Tamago Production"
+  },
+  "footer": {
+    "disclaimer": "Fan-made website · Not affiliated with QWER or Tamago Production · QWER © 3Y Corporation",
+    "fan_note": "Made with love by the bawige community"
+  },
+  "language": {
+    "en": "EN",
+    "ko": "KR",
+    "ms": "MY",
+    "ja": "JP"
+  }
+}
