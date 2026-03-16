@@ -1,5 +1,6 @@
 <template>
   <div
+    ref="itemRef"
     class="timeline-item relative flex gap-6 sm:gap-8 pb-12 last:pb-0"
   >
     <!-- Timeline rail -->
@@ -43,13 +44,17 @@
 </template>
 
 <script setup lang="ts">
-import { computed } from 'vue'
+import { computed, ref } from 'vue'
 import { useLanguage } from '@/composables/useLanguage'
+import { useScrollReveal } from '@/composables/useScrollReveal'
 import QwBadge from '@/components/shared/QwBadge.vue'
 import type { TimelineItem } from '@/types'
 
 const props = defineProps<{ item: TimelineItem }>()
 const { localized } = useLanguage()
+
+const itemRef = ref<HTMLElement | null>(null)
+useScrollReveal(itemRef, { y: 25, duration: 0.6 })
 
 const formattedDate = computed(() => {
   const d = new Date(props.item.date)

@@ -11,7 +11,10 @@
     <!-- Content -->
     <div class="relative z-10 text-center px-4">
       <!-- Logotype -->
-      <h1 class="hero-logo font-display text-[clamp(4rem,15vw,9rem)] leading-none tracking-display text-qwer-white">
+      <h1
+        ref="logoRef"
+        class="hero-logo font-display text-[clamp(4rem,15vw,9rem)] leading-none tracking-display text-qwer-white"
+      >
         QWER
       </h1>
 
@@ -52,10 +55,15 @@
 </template>
 
 <script setup lang="ts">
+import { ref } from 'vue'
 import { useLanguage } from '@/composables/useLanguage'
+import { useGlitch } from '@/composables/useGlitch'
 import QwButton from '@/components/shared/QwButton.vue'
 
 const { t } = useLanguage()
+
+const logoRef = ref<HTMLElement | null>(null)
+useGlitch(logoRef, { onLoad: true, interval: 6000, duration: 0.1 })
 </script>
 
 <style scoped>

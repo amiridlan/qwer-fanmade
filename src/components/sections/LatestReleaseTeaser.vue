@@ -6,7 +6,7 @@
       :subtitle="releaseLabel"
     />
 
-    <div class="mt-8 grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+    <div ref="contentRef" class="mt-8 grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
       <!-- Cover art placeholder -->
       <div class="aspect-square w-full max-w-md mx-auto md:mx-0 rounded-sm bg-qwer-stage border border-white/10 overflow-hidden flex items-center justify-center">
         <div class="text-center">
@@ -64,8 +64,9 @@
 </template>
 
 <script setup lang="ts">
-import { computed } from 'vue'
+import { computed, ref } from 'vue'
 import { useLanguage } from '@/composables/useLanguage'
+import { useScrollReveal } from '@/composables/useScrollReveal'
 import { getLatestRelease } from '@/data/releases'
 import SectionHeader from '@/components/shared/SectionHeader.vue'
 import QwBadge from '@/components/shared/QwBadge.vue'
@@ -73,6 +74,9 @@ import QwButton from '@/components/shared/QwButton.vue'
 
 const { t, localized } = useLanguage()
 const release = getLatestRelease()
+
+const contentRef = ref<HTMLElement | null>(null)
+useScrollReveal(contentRef, { stagger: 0.15, y: 30 })
 
 const releaseLabel = computed(() => {
   const date = new Date(release.releaseDate)

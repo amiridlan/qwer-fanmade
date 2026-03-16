@@ -8,7 +8,7 @@
     />
 
     <!-- Upcoming shows list -->
-    <div v-if="nextShows.length" class="mt-10 max-w-2xl mx-auto space-y-3">
+    <div v-if="nextShows.length" ref="showsRef" class="mt-10 max-w-2xl mx-auto space-y-3">
       <RouterLink
         v-for="show in nextShows"
         :key="show.id"
@@ -64,14 +64,19 @@
 </template>
 
 <script setup lang="ts">
+import { ref } from 'vue'
 import { RouterLink } from 'vue-router'
 import { useLanguage } from '@/composables/useLanguage'
+import { useScrollReveal } from '@/composables/useScrollReveal'
 import { upcomingShows, worldTourShows } from '@/data/shows'
 import SectionHeader from '@/components/shared/SectionHeader.vue'
 import QwBadge from '@/components/shared/QwBadge.vue'
 import QwButton from '@/components/shared/QwButton.vue'
 
 const { t, localized } = useLanguage()
+
+const showsRef = ref<HTMLElement | null>(null)
+useScrollReveal(showsRef, { stagger: 0.08, y: 20 })
 
 const nextShows = upcomingShows.slice(0, 4)
 
