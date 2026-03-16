@@ -1,7 +1,17 @@
 <template>
   <div class="flex min-h-screen flex-col">
+    <!-- Skip to content (a11y) -->
+    <a
+      href="#main-content"
+      class="sr-only focus:not-sr-only focus:fixed focus:top-2 focus:left-2 focus:z-[9999]
+             focus:px-4 focus:py-2 focus:bg-qwer-crimson focus:text-qwer-white focus:rounded-sm
+             focus:text-sm focus:font-medium"
+    >
+      Skip to content
+    </a>
+
     <AppHeader />
-    <main class="flex-1 pt-16">
+    <main id="main-content" class="flex-1 pt-16" role="main">
       <RouterView v-slot="{ Component, route }">
         <Transition
           name="page"

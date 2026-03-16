@@ -18,9 +18,11 @@
 
 <script setup lang="ts">
 import { useLanguage } from '@/composables/useLanguage'
+import { useHead } from '@/composables/useHead'
 import { members } from '@/data/members'
 import SectionHeader from '@/components/shared/SectionHeader.vue'
 import MemberCard from '@/components/sections/MemberCard.vue'
 
 const { t } = useLanguage()
+useHead({ title: () => t('members.title'), description: 'Meet the four members of QWER — Chodan, Magenta, Hina, and Siyeon.' })
 </script>

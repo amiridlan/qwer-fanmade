@@ -73,6 +73,7 @@
 
 <script setup lang="ts">
 import { useLanguage } from '@/composables/useLanguage'
+import { useHead } from '@/composables/useHead'
 import { timelineSorted } from '@/data/timeline'
 import TimelineItemComponent from '@/components/sections/TimelineItem.vue'
 import QwDivider from '@/components/shared/QwDivider.vue'
@@ -80,6 +81,7 @@ import FanDisclaimer from '@/components/shared/FanDisclaimer.vue'
 import type { LocalizedString } from '@/types'
 
 const { t, localized } = useLanguage()
+useHead({ title: () => t('about.title'), description: 'The story of QWER — from a YouTube project to a real band.' })
 
 const storyIntro: LocalizedString = {
   en: 'Four strangers from completely different worlds — a metal-loving streamer, an anime-obsessed bassist, a TikTok cosplayer, and a former J-pop idol. One YouTube project brought them together. What happened next was real.',

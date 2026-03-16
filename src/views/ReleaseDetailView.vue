@@ -127,6 +127,7 @@
 import { computed } from 'vue'
 import { RouterLink, useRoute } from 'vue-router'
 import { useLanguage } from '@/composables/useLanguage'
+import { useHead } from '@/composables/useHead'
 import { getReleaseBySlug, releasesSorted } from '@/data/releases'
 import QwBadge from '@/components/shared/QwBadge.vue'
 import QwButton from '@/components/shared/QwButton.vue'
@@ -138,6 +139,10 @@ const { t, localized } = useLanguage()
 
 const slug = computed(() => route.params.slug as string)
 const release = computed(() => getReleaseBySlug(slug.value))
+
+useHead({
+  title: () => release.value ? `${localized(release.value.title)} — ${t('music.title')}` : t('music.title'),
+})
 
 const formattedDate = computed(() => {
   if (!release.value) return ''

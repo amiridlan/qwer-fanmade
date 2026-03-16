@@ -71,11 +71,13 @@
 <script setup lang="ts">
 import { ref } from 'vue'
 import { useLanguage } from '@/composables/useLanguage'
+import { useHead } from '@/composables/useHead'
 import { upcomingShows, pastShows, worldTourShows } from '@/data/shows'
 import SectionHeader from '@/components/shared/SectionHeader.vue'
 import TourBanner from '@/components/sections/TourBanner.vue'
 import ShowCard from '@/components/sections/ShowCard.vue'
 
 const { t } = useLanguage()
+useHead({ title: () => t('live.title'), description: 'QWER live shows and Rockation world tour dates.' })
 const pastOpen = ref(false)
 </script>

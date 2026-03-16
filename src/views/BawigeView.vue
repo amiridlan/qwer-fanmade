@@ -109,9 +109,11 @@
 
 <script setup lang="ts">
 import { useLanguage } from '@/composables/useLanguage'
+import { useHead } from '@/composables/useHead'
 import { fandom } from '@/data/fandom'
 import QwDivider from '@/components/shared/QwDivider.vue'
 import FanDisclaimer from '@/components/shared/FanDisclaimer.vue'
 
 const { t, localized } = useLanguage()
+useHead({ title: () => t('bawige.title'), description: 'Bawige (바위게) — QWER official fandom. Scuttle Crab lore, community links.' })
 </script>

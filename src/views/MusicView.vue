@@ -41,12 +41,14 @@
 <script setup lang="ts">
 import { ref, computed } from 'vue'
 import { useLanguage } from '@/composables/useLanguage'
+import { useHead } from '@/composables/useHead'
 import { releasesSorted } from '@/data/releases'
 import SectionHeader from '@/components/shared/SectionHeader.vue'
 import ReleaseCard from '@/components/sections/ReleaseCard.vue'
 import type { ReleaseType } from '@/types'
 
 const { t } = useLanguage()
+useHead({ title: () => t('music.title'), description: 'QWER discography — albums, EPs, and singles.' })
 
 const activeFilter = ref<'all' | ReleaseType>('all')
 

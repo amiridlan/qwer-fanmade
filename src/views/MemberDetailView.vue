@@ -164,6 +164,7 @@
 import { computed } from 'vue'
 import { RouterLink, useRoute } from 'vue-router'
 import { useLanguage } from '@/composables/useLanguage'
+import { useHead } from '@/composables/useHead'
 import { useMemberColor } from '@/composables/useMemberColor'
 import { members } from '@/data/members'
 import QwBadge from '@/components/shared/QwBadge.vue'
@@ -174,6 +175,10 @@ const { t, localized } = useLanguage()
 
 const slug = computed(() => route.params.slug as string)
 const { member, color, cssVars } = useMemberColor(() => slug.value)
+
+useHead({
+  title: () => member.value ? `${localized(member.value.name)} — ${t('members.title')}` : t('members.title'),
+})
 
 const socialEntries = computed(() => {
   if (!member.value) return []
