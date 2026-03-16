@@ -47,7 +47,7 @@
 
         <div class="mt-8 flex gap-3">
           <QwButton :to="`/music/${release.slug}`" small>
-            View Release
+            {{ t('music.view_release') }}
           </QwButton>
           <QwButton
             v-if="release.streaming.spotify"
@@ -55,7 +55,7 @@
             :href="release.streaming.spotify"
             small
           >
-            Listen
+            {{ t('music.listen') }}
           </QwButton>
         </div>
       </div>

@@ -11,15 +11,16 @@
     "tagline": "불협화음에서 화음으로",
     "subtitle": "K-팝 록 밴드 · 타마고 프로덕션 · 2023–",
     "cta_music": "최신 앨범",
-    "cta_tour": "공연 일정"
+    "cta_tour": "공연 일정",
+    "scroll": "스크롤"
   },
   "members": {
     "title": "멤버",
     "subtitle": "네 사람. 하나의 밴드.",
-    "chodan_role": "드러머 · 리더 · 서브보컬",
-    "magenta_role": "베이시스트",
-    "hina_role": "기타리스트 · 키보디스트 · 막내",
-    "siyeon_role": "메인보컬 · 기타리스트"
+    "fun_facts": "재미있는 사실",
+    "connect": "연결",
+    "previous": "이전",
+    "next": "다음"
   },
   "music": {
     "title": "디스코그래피",
@@ -27,28 +28,54 @@
     "filter_all": "전체",
     "filter_album": "앨범",
     "filter_ep": "EP",
-    "filter_single": "싱글"
+    "filter_single": "싱글",
+    "tracklist": "트랙리스트",
+    "credits": "크레딧",
+    "view_release": "발매작 보기",
+    "listen": "듣기",
+    "preview": "미리듣기",
+    "no_releases": "이 카테고리에 발매작이 없습니다.",
+    "previous": "이전",
+    "next": "다음"
   },
   "live": {
     "title": "라이브",
     "subtitle": "무대 위에서",
     "upcoming": "예정된 공연",
     "past": "지난 공연",
-    "no_upcoming": "예정된 공연이 없습니다. 곧 업데이트될 예정입니다."
+    "no_upcoming": "예정된 공연이 없습니다. 곧 업데이트될 예정입니다.",
+    "tickets": "티켓",
+    "cancelled": "취소됨",
+    "world_tour": "월드 투어 2025"
   },
   "bawige": {
     "title": "바위게",
     "subtitle": "바위게 · 팬덤",
+    "what_is": "바위게란?",
+    "fandom_facts": "팬덤 팩트",
+    "official": "공식 QWER",
+    "community": "커뮤니티",
     "disclaimer": "이 웹사이트는 팬 제작 사이트입니다. QWER 및 관련 상표는 타마고 프로덕션 및 3Y Corporation에 속합니다. QWER 또는 소속사와 무관합니다."
   },
   "about": {
     "title": "우리의 이야기",
     "subtitle": "불협화음에서 화음으로",
+    "origin": "시작",
+    "timeline": "타임라인",
+    "inspirations": "영감",
     "disclaimer": "팬 제작 사이트 · QWER 또는 타마고 프로덕션과 무관"
   },
   "footer": {
     "disclaimer": "팬 제작 사이트 · QWER 또는 타마고 프로덕션과 무관 · QWER © 3Y Corporation",
-    "fan_note": "바위게 커뮤니티가 사랑을 담아 만들었습니다"
+    "fan_note": "바위게 커뮤니티가 사랑을 담아 만들었습니다",
+    "connect": "연결"
+  },
+  "common": {
+    "previous": "이전",
+    "next": "다음",
+    "not_found": "찾을 수 없습니다.",
+    "member_not_found": "멤버를 찾을 수 없습니다.",
+    "release_not_found": "발매작을 찾을 수 없습니다."
   },
   "language": {
     "en": "EN",

@@ -10,7 +10,7 @@
     <div class="relative z-10 px-6 sm:px-10 py-10 sm:py-14 flex flex-col md:flex-row items-center gap-8">
       <!-- Text side -->
       <div class="flex-1 text-center md:text-left">
-        <p class="label-meta text-qwer-crimson mb-2">World Tour 2025</p>
+        <p class="label-meta text-qwer-crimson mb-2">{{ t('live.world_tour') }}</p>
         <h2 class="font-display text-5xl sm:text-6xl lg:text-7xl tracking-display text-qwer-white">
           ROCKATION
         </h2>
@@ -49,7 +49,7 @@ import { useLanguage } from '@/composables/useLanguage'
 import { worldTourShows } from '@/data/shows'
 import type { LocalizedString } from '@/types'
 
-const { localized } = useLanguage()
+const { t, localized } = useLanguage()
 
 const tourShows = worldTourShows
 const tourDescription: LocalizedString = {

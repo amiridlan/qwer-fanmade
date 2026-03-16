@@ -11,15 +11,16 @@
     "tagline": "Harmony from Discord",
     "subtitle": "K-pop rock band · Tamago Production · 2023–",
     "cta_music": "Latest Release",
-    "cta_tour": "Tour Dates"
+    "cta_tour": "Tour Dates",
+    "scroll": "Scroll"
   },
   "members": {
     "title": "Members",
     "subtitle": "Four people. One band.",
-    "chodan_role": "Drummer · Leader · Sub-vocalist",
-    "magenta_role": "Bassist",
-    "hina_role": "Guitarist · Keyboardist · Maknae",
-    "siyeon_role": "Main Vocalist · Guitarist"
+    "fun_facts": "Fun Facts",
+    "connect": "Connect",
+    "previous": "Previous",
+    "next": "Next"
   },
   "music": {
     "title": "Discography",
@@ -27,28 +28,54 @@
     "filter_all": "All",
     "filter_album": "Albums",
     "filter_ep": "EPs",
-    "filter_single": "Singles"
+    "filter_single": "Singles",
+    "tracklist": "Tracklist",
+    "credits": "Credits",
+    "view_release": "View Release",
+    "listen": "Listen",
+    "preview": "Preview",
+    "no_releases": "No releases in this category yet.",
+    "previous": "Previous",
+    "next": "Next"
   },
   "live": {
     "title": "Live",
     "subtitle": "On stage",
     "upcoming": "Upcoming Shows",
     "past": "Past Shows",
-    "no_upcoming": "No upcoming shows. Check back soon."
+    "no_upcoming": "No upcoming shows. Check back soon.",
+    "tickets": "Tickets",
+    "cancelled": "Cancelled",
+    "world_tour": "World Tour 2025"
   },
   "bawige": {
     "title": "Bawige",
     "subtitle": "바위게 · Scuttle Crab",
+    "what_is": "What is Bawige?",
+    "fandom_facts": "Fandom Facts",
+    "official": "Official QWER",
+    "community": "Community",
     "disclaimer": "This is a fan-made website. QWER and all associated trademarks belong to Tamago Production and 3Y Corporation. Not affiliated with or endorsed by QWER or their management."
   },
   "about": {
     "title": "Our Story",
     "subtitle": "Harmony from Discord",
+    "origin": "The Origin",
+    "timeline": "Timeline",
+    "inspirations": "Inspirations",
     "disclaimer": "Fan-made site · Not affiliated with QWER or Tamago Production"
   },
   "footer": {
     "disclaimer": "Fan-made website · Not affiliated with QWER or Tamago Production · QWER © 3Y Corporation",
-    "fan_note": "Made with love by the bawige community"
+    "fan_note": "Made with love by the bawige community",
+    "connect": "Connect"
+  },
+  "common": {
+    "previous": "Previous",
+    "next": "Next",
+    "not_found": "Not found.",
+    "member_not_found": "Member not found.",
+    "release_not_found": "Release not found."
   },
   "language": {
     "en": "EN",

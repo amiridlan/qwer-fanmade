@@ -21,7 +21,7 @@
 
     <!-- Origin narrative -->
     <section class="py-16 px-4 sm:px-6 lg:px-8 max-w-3xl mx-auto">
-      <h2 class="label-meta mb-6">The Origin</h2>
+      <h2 class="label-meta mb-6">{{ t('about.origin') }}</h2>
       <div class="space-y-4 text-sm text-qwer-white/80 leading-relaxed">
         <p>{{ localized(originP1) }}</p>
         <p>{{ localized(originP2) }}</p>
@@ -32,7 +32,7 @@
 
     <!-- Timeline -->
     <section class="py-16 px-4 sm:px-6 lg:px-8 max-w-3xl mx-auto">
-      <h2 class="label-meta mb-10 text-qwer-crimson">Timeline</h2>
+      <h2 class="label-meta mb-10 text-qwer-crimson">{{ t('about.timeline') }}</h2>
       <div>
         <TimelineItemComponent
           v-for="item in timelineSorted"
@@ -46,7 +46,7 @@
 
     <!-- Inspirations -->
     <section class="py-16 px-4 sm:px-6 lg:px-8 max-w-3xl mx-auto">
-      <h2 class="label-meta mb-8">Inspirations</h2>
+      <h2 class="label-meta mb-8">{{ t('about.inspirations') }}</h2>
       <div class="grid grid-cols-2 sm:grid-cols-3 gap-4">
         <div
           v-for="insp in inspirations"

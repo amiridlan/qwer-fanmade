@@ -33,7 +33,7 @@
     </div>
 
     <p v-if="!filteredReleases.length" class="mt-16 text-center text-sm text-qwer-gray">
-      No releases in this category yet.
+      {{ t('music.no_releases') }}
     </p>
   </div>
 </template>

@@ -70,7 +70,7 @@
 
     <!-- Fun Facts -->
     <section class="py-16 px-4 sm:px-6 lg:px-8 max-w-4xl mx-auto">
-      <h2 class="label-meta mb-6" :style="{ color }">Fun Facts</h2>
+      <h2 class="label-meta mb-6" :style="{ color }">{{ t('members.fun_facts') }}</h2>
       <ul class="space-y-4">
         <li
           v-for="(fact, i) in member.funFacts"
@@ -93,7 +93,7 @@
       v-if="socialEntries.length"
       class="py-16 px-4 sm:px-6 lg:px-8 max-w-4xl mx-auto border-t border-white/5"
     >
-      <h2 class="label-meta mb-6" :style="{ color }">Connect</h2>
+      <h2 class="label-meta mb-6" :style="{ color }">{{ t('members.connect') }}</h2>
       <div class="flex flex-wrap gap-4">
         <a
           v-for="[platform, url] in socialEntries"
@@ -122,7 +122,7 @@
         >
           <span>&larr;</span>
           <div>
-            <p class="label-meta text-[9px] mb-0.5">Previous</p>
+            <p class="label-meta text-[9px] mb-0.5">{{ t('common.previous') }}</p>
             <p class="font-display text-lg tracking-heading" :style="{ color: prevMember.color }">
               {{ localized(prevMember.name) }}
             </p>
@@ -136,7 +136,7 @@
           class="group flex items-center gap-3 text-sm text-qwer-gray hover:text-qwer-white transition-colors duration-hover text-right"
         >
           <div>
-            <p class="label-meta text-[9px] mb-0.5">Next</p>
+            <p class="label-meta text-[9px] mb-0.5">{{ t('common.next') }}</p>
             <p class="font-display text-lg tracking-heading" :style="{ color: nextMember.color }">
               {{ localized(nextMember.name) }}
             </p>
@@ -152,7 +152,7 @@
   <div v-else class="min-h-screen flex items-center justify-center">
     <div class="text-center">
       <p class="font-display text-4xl tracking-display text-qwer-crimson">404</p>
-      <p class="mt-2 text-sm text-qwer-gray">Member not found.</p>
+      <p class="mt-2 text-sm text-qwer-gray">{{ t('common.member_not_found') }}</p>
       <QwButton to="/members" class="mt-6">
         {{ t('nav.members') }}
       </QwButton>

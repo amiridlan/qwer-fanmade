@@ -47,7 +47,7 @@
     <!-- Scroll indicator -->
     <div class="absolute bottom-8 left-1/2 -translate-x-1/2 z-10">
       <div class="scroll-indicator flex flex-col items-center gap-2">
-        <span class="label-meta text-[9px]">Scroll</span>
+        <span class="label-meta text-[9px]">{{ t('hero.scroll') }}</span>
         <div class="w-px h-8 bg-gradient-to-b from-qwer-gray/60 to-transparent scroll-line" />
       </div>
     </div>

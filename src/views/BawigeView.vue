@@ -21,7 +21,7 @@
 
     <!-- What is Bawige -->
     <section class="py-16 px-4 sm:px-6 lg:px-8 max-w-3xl mx-auto">
-      <h2 class="label-meta mb-6 text-qwer-crimson">What is Bawige?</h2>
+      <h2 class="label-meta mb-6 text-qwer-crimson">{{ t('bawige.what_is') }}</h2>
       <p class="text-sm text-qwer-white/80 leading-relaxed">
         {{ localized(fandom.description) }}
       </p>
@@ -31,7 +31,7 @@
 
     <!-- Fandom facts -->
     <section class="py-16 px-4 sm:px-6 lg:px-8 max-w-3xl mx-auto">
-      <h2 class="label-meta mb-8">Fandom Facts</h2>
+      <h2 class="label-meta mb-8">{{ t('bawige.fandom_facts') }}</h2>
       <ul class="space-y-5">
         <li
           v-for="(fact, i) in fandom.facts"
@@ -53,7 +53,7 @@
 
     <!-- Official links -->
     <section class="py-16 px-4 sm:px-6 lg:px-8 max-w-3xl mx-auto">
-      <h2 class="label-meta mb-8 text-qwer-crimson">Official QWER</h2>
+      <h2 class="label-meta mb-8 text-qwer-crimson">{{ t('bawige.official') }}</h2>
       <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
         <a
           v-for="link in fandom.officialLinks"
@@ -78,7 +78,7 @@
 
     <!-- Community links -->
     <section v-if="fandom.communityLinks.length" class="py-16 px-4 sm:px-6 lg:px-8 max-w-3xl mx-auto">
-      <h2 class="label-meta mb-8">Community</h2>
+      <h2 class="label-meta mb-8">{{ t('bawige.community') }}</h2>
       <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
         <a
           v-for="link in fandom.communityLinks"

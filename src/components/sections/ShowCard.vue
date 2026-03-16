@@ -44,13 +44,13 @@
         :href="show.ticketUrl"
         small
       >
-        Tickets
+        {{ t('live.tickets') }}
       </QwButton>
       <span
         v-else-if="show.status === 'cancelled'"
         class="text-xs text-qwer-gray/50 tracking-meta uppercase"
       >
-        Cancelled
+        {{ t('live.cancelled') }}
       </span>
     </div>
   </div>
@@ -63,7 +63,7 @@ import QwButton from '@/components/shared/QwButton.vue'
 import type { Show } from '@/types'
 
 defineProps<{ show: Show }>()
-const { localized } = useLanguage()
+const { t, localized } = useLanguage()
 
 function formatDay(dateStr: string): string {
   return new Date(dateStr).getDate().toString()

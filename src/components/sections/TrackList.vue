@@ -35,7 +35,7 @@
         v-if="track.previewUrl"
         class="shrink-0 text-[10px] tracking-meta uppercase text-qwer-gray/40 group-hover:text-qwer-crimson/60 transition-colors duration-hover"
       >
-        Preview
+        {{ t('music.preview') }}
       </span>
 
       <!-- MV link -->
@@ -68,7 +68,7 @@ interface PlayableTrack extends Track {
 }
 
 defineProps<{ tracks: PlayableTrack[] }>()
-const { localized } = useLanguage()
+const { t, localized } = useLanguage()
 const { play, currentTrack, isPlaying } = useAudioPlayer()
 
 function trackId(track: PlayableTrack): string {

@@ -60,7 +60,7 @@
 
     <!-- Tracklist -->
     <section class="py-12 px-4 sm:px-6 lg:px-8 max-w-4xl mx-auto">
-      <h2 class="label-meta mb-6">Tracklist</h2>
+      <h2 class="label-meta mb-6">{{ t('music.tracklist') }}</h2>
       <TrackList :tracks="release.tracks" />
     </section>
 
@@ -69,7 +69,7 @@
       v-if="release.credits"
       class="py-12 px-4 sm:px-6 lg:px-8 max-w-4xl mx-auto border-t border-white/5"
     >
-      <h2 class="label-meta mb-4">Credits</h2>
+      <h2 class="label-meta mb-4">{{ t('music.credits') }}</h2>
       <p class="text-sm text-qwer-gray leading-relaxed whitespace-pre-line">
         {{ localized(release.credits) }}
       </p>
@@ -85,7 +85,7 @@
         >
           <span>&larr;</span>
           <div>
-            <p class="label-meta text-[9px] mb-0.5">Previous</p>
+            <p class="label-meta text-[9px] mb-0.5">{{ t('common.previous') }}</p>
             <p class="font-display text-lg tracking-heading text-qwer-white">
               {{ localized(prevRelease.title) }}
             </p>
@@ -99,7 +99,7 @@
           class="flex items-center gap-3 text-sm text-qwer-gray hover:text-qwer-white transition-colors duration-hover text-right"
         >
           <div>
-            <p class="label-meta text-[9px] mb-0.5">Next</p>
+            <p class="label-meta text-[9px] mb-0.5">{{ t('common.next') }}</p>
             <p class="font-display text-lg tracking-heading text-qwer-white">
               {{ localized(nextRelease.title) }}
             </p>
@@ -115,7 +115,7 @@
   <div v-else class="min-h-screen flex items-center justify-center">
     <div class="text-center">
       <p class="font-display text-4xl tracking-display text-qwer-crimson">404</p>
-      <p class="mt-2 text-sm text-qwer-gray">Release not found.</p>
+      <p class="mt-2 text-sm text-qwer-gray">{{ t('common.release_not_found') }}</p>
       <QwButton to="/music" class="mt-6">
         {{ t('music.title') }}
       </QwButton>

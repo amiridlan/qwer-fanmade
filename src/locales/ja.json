@@ -11,15 +11,16 @@
     "tagline": "不協和から調和へ",
     "subtitle": "K-popロックバンド · タマゴプロダクション · 2023–",
     "cta_music": "最新リリース",
-    "cta_tour": "ツアー日程"
+    "cta_tour": "ツアー日程",
+    "scroll": "スクロール"
   },
   "members": {
     "title": "メンバー",
     "subtitle": "4人。1つのバンド。",
-    "chodan_role": "ドラマー · リーダー · サブボーカル",
-    "magenta_role": "ベーシスト",
-    "hina_role": "ギタリスト · キーボーディスト · マンネ",
-    "siyeon_role": "メインボーカル · ギタリスト"
+    "fun_facts": "豆知識",
+    "connect": "つながる",
+    "previous": "前へ",
+    "next": "次へ"
   },
   "music": {
     "title": "ディスコグラフィー",
@@ -27,28 +28,54 @@
     "filter_all": "すべて",
     "filter_album": "アルバム",
     "filter_ep": "EP",
-    "filter_single": "シングル"
+    "filter_single": "シングル",
+    "tracklist": "トラックリスト",
+    "credits": "クレジット",
+    "view_release": "リリースを見る",
+    "listen": "聴く",
+    "preview": "プレビュー",
+    "no_releases": "このカテゴリにはまだリリースがありません。",
+    "previous": "前へ",
+    "next": "次へ"
   },
   "live": {
     "title": "ライブ",
     "subtitle": "ステージで",
     "upcoming": "今後のライブ",
     "past": "過去のライブ",
-    "no_upcoming": "予定されているライブはありません。後ほど確認してください。"
+    "no_upcoming": "予定されているライブはありません。後ほど確認してください。",
+    "tickets": "チケット",
+    "cancelled": "キャンセル",
+    "world_tour": "ワールドツアー 2025"
   },
   "bawige": {
     "title": "バウィゲ",
     "subtitle": "바위게 · スカトルクラブ",
+    "what_is": "バウィゲとは？",
+    "fandom_facts": "ファンダムファクト",
+    "official": "公式QWER",
+    "community": "コミュニティ",
     "disclaimer": "このウェブサイトはファンメイドです。QWERおよび関連する商標はタマゴプロダクションおよび3Y Corporationに帰属します。QWERまたはそのマネジメントとは無関係です。"
   },
   "about": {
     "title": "私たちの物語",
     "subtitle": "不協和から調和へ",
+    "origin": "起源",
+    "timeline": "タイムライン",
+    "inspirations": "インスピレーション",
     "disclaimer": "ファンメイドサイト · QWERまたはタマゴプロダクションとは無関係"
   },
   "footer": {
     "disclaimer": "ファンメイドサイト · QWERまたはタマゴプロダクションとは無関係 · QWER © 3Y Corporation",
-    "fan_note": "バウィゲコミュニティが愛を込めて制作"
+    "fan_note": "バウィゲコミュニティが愛を込めて制作",
+    "connect": "つながる"
+  },
+  "common": {
+    "previous": "前へ",
+    "next": "次へ",
+    "not_found": "見つかりません。",
+    "member_not_found": "メンバーが見つかりません。",
+    "release_not_found": "リリースが見つかりません。"
   },
   "language": {
     "en": "EN",

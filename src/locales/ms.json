@@ -11,15 +11,16 @@
     "tagline": "Harmoni dari Percanggahan",
     "subtitle": "Kumpulan rock K-pop · Tamago Production · 2023–",
     "cta_music": "Keluaran Terbaru",
-    "cta_tour": "Jadual Konsert"
+    "cta_tour": "Jadual Konsert",
+    "scroll": "Tatal"
   },
   "members": {
     "title": "Ahli",
     "subtitle": "Empat orang. Satu kumpulan.",
-    "chodan_role": "Pemain Dram · Ketua · Sub-vokal",
-    "magenta_role": "Pemain Bas",
-    "hina_role": "Pemain Gitar · Pemain Kibod · Maknae",
-    "siyeon_role": "Vokal Utama · Pemain Gitar"
+    "fun_facts": "Fakta Menarik",
+    "connect": "Hubungi",
+    "previous": "Sebelum",
+    "next": "Seterusnya"
   },
   "music": {
     "title": "Diskografi",
@@ -27,28 +28,54 @@
     "filter_all": "Semua",
     "filter_album": "Album",
     "filter_ep": "EP",
-    "filter_single": "Single"
+    "filter_single": "Single",
+    "tracklist": "Senarai Lagu",
+    "credits": "Kredit",
+    "view_release": "Lihat Keluaran",
+    "listen": "Dengar",
+    "preview": "Pratonton",
+    "no_releases": "Tiada keluaran dalam kategori ini.",
+    "previous": "Sebelum",
+    "next": "Seterusnya"
   },
   "live": {
     "title": "Pentas",
     "subtitle": "Di atas pentas",
     "upcoming": "Konsert Akan Datang",
     "past": "Konsert Lalu",
-    "no_upcoming": "Tiada konsert akan datang. Semak semula nanti."
+    "no_upcoming": "Tiada konsert akan datang. Semak semula nanti.",
+    "tickets": "Tiket",
+    "cancelled": "Dibatalkan",
+    "world_tour": "Jelajah Dunia 2025"
   },
   "bawige": {
     "title": "Bawige",
     "subtitle": "바위게 · Scuttle Crab",
+    "what_is": "Apa itu Bawige?",
+    "fandom_facts": "Fakta Fandom",
+    "official": "QWER Rasmi",
+    "community": "Komuniti",
     "disclaimer": "Ini adalah laman web buatan peminat. QWER dan semua tanda dagangan berkaitan adalah milik Tamago Production dan 3Y Corporation. Tidak bergabung atau disokong oleh QWER atau pengurusan mereka."
   },
   "about": {
     "title": "Kisah Kami",
     "subtitle": "Harmoni dari Percanggahan",
+    "origin": "Asal Usul",
+    "timeline": "Garis Masa",
+    "inspirations": "Inspirasi",
     "disclaimer": "Laman buatan peminat · Tidak berkaitan dengan QWER atau Tamago Production"
   },
   "footer": {
     "disclaimer": "Laman buatan peminat · Tidak berkaitan dengan QWER atau Tamago Production · QWER © 3Y Corporation",
-    "fan_note": "Dibuat dengan kasih sayang oleh komuniti bawige"
+    "fan_note": "Dibuat dengan kasih sayang oleh komuniti bawige",
+    "connect": "Hubungi"
+  },
+  "common": {
+    "previous": "Sebelum",
+    "next": "Seterusnya",
+    "not_found": "Tidak ditemui.",
+    "member_not_found": "Ahli tidak ditemui.",
+    "release_not_found": "Keluaran tidak ditemui."
   },
   "language": {
     "en": "EN",

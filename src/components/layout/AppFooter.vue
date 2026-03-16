@@ -32,7 +32,7 @@
 
         <!-- Socials -->
         <div>
-          <h4 class="label-meta mb-4">Connect</h4>
+          <h4 class="label-meta mb-4">{{ t('footer.connect') }}</h4>
           <div class="flex gap-4">
             <a
               v-for="social in socials"
