@@ -16,6 +16,9 @@
     <AppFooter />
   </div>
 
+  <!-- Global audio player -->
+  <AudioPlayer />
+
   <!-- Page transition black flash overlay -->
   <Transition name="flash">
     <div v-if="flashing" class="fixed inset-0 z-[999] bg-qwer-black pointer-events-none" />
@@ -27,6 +30,7 @@ import { ref } from 'vue'
 import { RouterView } from 'vue-router'
 import AppHeader from '@/components/layout/AppHeader.vue'
 import AppFooter from '@/components/layout/AppFooter.vue'
+import AudioPlayer from '@/components/sections/AudioPlayer.vue'
 
 const flashing = ref(false)
 

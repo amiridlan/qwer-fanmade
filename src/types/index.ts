@@ -38,6 +38,7 @@ export interface Track {
   title: LocalizedString
   duration: string
   musicVideoUrl?: string
+  previewUrl?: string
 }
 
 export interface StreamingLinks {
