@@ -8,17 +8,18 @@
 
     <div ref="contentRef" class="mt-8 grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
       <!-- Cover art -->
-      <div class="aspect-square w-full max-w-md mx-auto md:mx-0 rounded-sm bg-qwer-stage border border-white/10 overflow-hidden flex items-center justify-center">
-        <img
+      <div class="aspect-square w-full max-w-md mx-auto md:mx-0 rounded-sm border border-white/10 overflow-hidden">
+        <CoverImage
           v-if="release.coverImage"
           :src="release.coverImage"
           :alt="localized(release.title)"
-          class="w-full h-full object-cover"
-          fetchpriority="high"
+          eager
         />
-        <div v-else class="text-center">
-          <span class="font-display text-6xl tracking-display text-qwer-crimson/30">QWER</span>
-          <p class="mt-2 label-meta">{{ localized(release.title) }}</p>
+        <div v-else class="w-full h-full bg-qwer-stage flex items-center justify-center">
+          <div class="text-center">
+            <span class="font-display text-6xl tracking-display text-qwer-crimson/30">QWER</span>
+            <p class="mt-2 label-meta">{{ localized(release.title) }}</p>
+          </div>
         </div>
       </div>
 
@@ -75,6 +76,7 @@ import { computed, ref } from 'vue'
 import { useLanguage } from '@/composables/useLanguage'
 import { useScrollReveal } from '@/composables/useScrollReveal'
 import { getLatestRelease } from '@/data/releases'
+import CoverImage from '@/components/shared/CoverImage.vue'
 import SectionHeader from '@/components/shared/SectionHeader.vue'
 import QwBadge from '@/components/shared/QwBadge.vue'
 import QwButton from '@/components/shared/QwButton.vue'

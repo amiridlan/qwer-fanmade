@@ -7,15 +7,14 @@
            hover:scale-[1.02]"
   >
     <!-- Cover art -->
-    <div class="aspect-square w-full bg-qwer-black/60 flex items-center justify-center relative overflow-hidden">
-      <img
+    <div class="aspect-square w-full relative overflow-hidden">
+      <CoverImage
         v-if="release.coverImage"
-        :src="thumbUrl"
+        :src="thumbUrl!"
         :alt="localized(release.title)"
-        class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
-        loading="lazy"
+        img-class="group-hover:scale-105 transition-transform duration-300"
       />
-      <div v-else class="text-center">
+      <div v-else class="w-full h-full bg-qwer-black/60 flex items-center justify-center">
         <span class="font-display text-4xl sm:text-5xl tracking-display text-qwer-crimson/20
                      group-hover:text-qwer-crimson/35 transition-colors duration-200">
           QWER
@@ -44,6 +43,7 @@ import { computed } from 'vue'
 import { RouterLink } from 'vue-router'
 import { useLanguage } from '@/composables/useLanguage'
 import { coverUrl } from '@/data/releases'
+import CoverImage from '@/components/shared/CoverImage.vue'
 import QwBadge from '@/components/shared/QwBadge.vue'
 import type { Release } from '@/types'
 

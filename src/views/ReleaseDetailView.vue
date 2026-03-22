@@ -23,18 +23,18 @@
 
             <div class="flex flex-col md:flex-row gap-10 items-start">
               <!-- Cover art -->
-              <div class="shrink-0 w-56 sm:w-64 md:w-72 aspect-square rounded-sm border border-white/10
-                          bg-qwer-black/60 flex items-center justify-center overflow-hidden">
-                <img
+              <div class="shrink-0 w-56 sm:w-64 md:w-72 aspect-square rounded-sm border border-white/10 overflow-hidden">
+                <CoverImage
                   v-if="release.coverImage"
                   :src="release.coverImage"
                   :alt="localized(release.title)"
-                  class="w-full h-full object-cover"
-                  fetchpriority="high"
+                  eager
                 />
-                <div v-else class="text-center">
-                  <span class="font-display text-5xl tracking-display text-qwer-crimson/25">QWER</span>
-                  <p class="mt-1 label-meta">{{ localized(release.title) }}</p>
+                <div v-else class="w-full h-full bg-qwer-black/60 flex items-center justify-center">
+                  <div class="text-center">
+                    <span class="font-display text-5xl tracking-display text-qwer-crimson/25">QWER</span>
+                    <p class="mt-1 label-meta">{{ localized(release.title) }}</p>
+                  </div>
                 </div>
               </div>
 
@@ -142,6 +142,7 @@ import { RouterLink, useRoute } from 'vue-router'
 import { useLanguage } from '@/composables/useLanguage'
 import { useHead } from '@/composables/useHead'
 import { getReleaseBySlug, releasesSorted } from '@/data/releases'
+import CoverImage from '@/components/shared/CoverImage.vue'
 import QwBadge from '@/components/shared/QwBadge.vue'
 import QwButton from '@/components/shared/QwButton.vue'
 import StreamingLinks from '@/components/shared/StreamingLinks.vue'
