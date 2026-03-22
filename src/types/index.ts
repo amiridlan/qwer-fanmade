@@ -31,7 +31,7 @@ export interface Member {
 }
 
 // ─── Releases ─────────────────────────────────────────────────────────────────
-export type ReleaseType = 'album' | 'ep' | 'single'
+export type ReleaseType = 'album' | 'ep' | 'single' | 'collaboration'
 
 export interface Track {
   number: number
@@ -87,6 +87,19 @@ export interface TimelineItem {
   title: LocalizedString
   description: LocalizedString
   type: 'formation' | 'debut' | 'release' | 'concert' | 'milestone'
+  image?: string
+}
+
+// ─── Awards ──────────────────────────────────────────────────────────────────
+export type AwardCategory = 'music-show' | 'ceremony'
+
+export interface Award {
+  id: string
+  date: string // ISO date string
+  ceremony: LocalizedString
+  award: LocalizedString
+  song?: LocalizedString
+  category: AwardCategory
   image?: string
 }
 

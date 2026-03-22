@@ -5,6 +5,7 @@
     "music": "Muzik",
     "live": "Pentas",
     "bawige": "Bawige",
+    "awards": "Anugerah",
     "about": "Tentang"
   },
   "hero": {
@@ -29,6 +30,9 @@
     "filter_album": "Album",
     "filter_ep": "EP",
     "filter_single": "Single",
+    "filter_collaboration": "Kolaborasi",
+    "latest": "Keluaran Terkini",
+    "view_all_releases": "Lihat Semua Keluaran",
     "tracklist": "Senarai Lagu",
     "credits": "Kredit",
     "view_release": "Lihat Keluaran",
@@ -69,6 +73,11 @@
     "disclaimer": "Laman buatan peminat · Tidak berkaitan dengan QWER atau Tamago Production · QWER © 3Y Corporation",
     "fan_note": "Dibuat dengan kasih sayang oleh komuniti bawige",
     "connect": "Hubungi"
+  },
+  "awards": {
+    "eyebrow": "Pencapaian",
+    "title": "Anugerah",
+    "total": "anugerah dimenangi"
   },
   "common": {
     "previous": "Sebelum",

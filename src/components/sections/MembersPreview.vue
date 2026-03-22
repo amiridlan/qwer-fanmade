@@ -6,11 +6,14 @@
       centered
     />
 
-    <div ref="gridRef" class="mt-10 grid grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6">
+    <div ref="gridRef" class="mt-10 flex h-[50vh] sm:h-[60vh] lg:h-[70vh] -mx-4 sm:-mx-6 lg:-mx-8">
       <MemberCard
-        v-for="member in members"
+        v-for="(member, i) in members"
         :key="member.slug"
         :member="member"
+        :index="i"
+        :total="members.length"
+        :class="i > 0 ? '-ml-[4%]' : ''"
       />
     </div>
 

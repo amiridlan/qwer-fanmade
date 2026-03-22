@@ -5,6 +5,7 @@
     "music": "Music",
     "live": "Live",
     "bawige": "Bawige",
+    "awards": "Awards",
     "about": "About"
   },
   "hero": {
@@ -29,6 +30,9 @@
     "filter_album": "Albums",
     "filter_ep": "EPs",
     "filter_single": "Singles",
+    "filter_collaboration": "Collabs",
+    "latest": "Latest Release",
+    "view_all_releases": "View All Releases",
     "tracklist": "Tracklist",
     "credits": "Credits",
     "view_release": "View Release",
@@ -69,6 +73,11 @@
     "disclaimer": "Fan-made website · Not affiliated with QWER or Tamago Production · QWER © 3Y Corporation",
     "fan_note": "Made with love by the bawige community",
     "connect": "Connect"
+  },
+  "awards": {
+    "eyebrow": "Achievements",
+    "title": "Awards",
+    "total": "awards won"
   },
   "common": {
     "previous": "Previous",

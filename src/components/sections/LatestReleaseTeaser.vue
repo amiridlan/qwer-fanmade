@@ -1,15 +1,22 @@
 <template>
   <section class="py-20 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
     <SectionHeader
-      :eyebrow="t('music.title')"
+      :eyebrow="t('music.latest')"
       :title="localized(release.title)"
       :subtitle="releaseLabel"
     />
 
     <div ref="contentRef" class="mt-8 grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
-      <!-- Cover art placeholder -->
+      <!-- Cover art -->
       <div class="aspect-square w-full max-w-md mx-auto md:mx-0 rounded-sm bg-qwer-stage border border-white/10 overflow-hidden flex items-center justify-center">
-        <div class="text-center">
+        <img
+          v-if="release.coverImage"
+          :src="release.coverImage"
+          :alt="localized(release.title)"
+          class="w-full h-full object-cover"
+          loading="lazy"
+        />
+        <div v-else class="text-center">
           <span class="font-display text-6xl tracking-display text-qwer-crimson/30">QWER</span>
           <p class="mt-2 label-meta">{{ localized(release.title) }}</p>
         </div>
@@ -46,8 +53,8 @@
         </ol>
 
         <div class="mt-8 flex gap-3">
-          <QwButton :to="`/music/${release.slug}`" small>
-            {{ t('music.view_release') }}
+          <QwButton to="/music" small>
+            {{ t('music.view_all_releases') }}
           </QwButton>
           <QwButton
             v-if="release.streaming.spotify"

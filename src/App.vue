@@ -14,12 +14,12 @@
     <main id="main-content" class="flex-1 pt-16" role="main">
       <RouterView v-slot="{ Component, route }">
         <Transition
-          name="page"
+          :name="transitionName"
           mode="out-in"
           @before-leave="onBeforeLeave"
           @after-enter="onAfterEnter"
         >
-          <component :is="Component" :key="route.path" />
+          <component :is="Component" :key="routeKey(route)" />
         </Transition>
       </RouterView>
     </main>
@@ -37,10 +37,18 @@
 
 <script setup lang="ts">
 import { ref } from 'vue'
-import { RouterView } from 'vue-router'
+import { RouterView, type RouteLocationNormalizedLoaded } from 'vue-router'
 import AppHeader from '@/components/layout/AppHeader.vue'
 import AppFooter from '@/components/layout/AppFooter.vue'
 import AudioPlayer from '@/components/sections/AudioPlayer.vue'
+
+const transitionName = ref('page')
+
+/** Keep same key for release-detail routes so the component stays mounted during prev/next nav */
+function routeKey(route: RouteLocationNormalizedLoaded): string {
+  if (route.name === 'release-detail') return 'release-detail'
+  return route.path
+}
 
 const flashing = ref(false)
 
@@ -50,6 +58,7 @@ function onBeforeLeave() {
 
 function onAfterEnter() {
   flashing.value = false
+  transitionName.value = 'page'
 }
 </script>
 
@@ -78,5 +87,33 @@ function onAfterEnter() {
 .flash-enter-from,
 .flash-leave-to {
   opacity: 0;
+}
+
+/* Slide-left: next release (content slides left) */
+.slide-left-enter-active,
+.slide-left-leave-active {
+  transition: transform 250ms cubic-bezier(0.22, 1, 0.36, 1), opacity 250ms cubic-bezier(0.22, 1, 0.36, 1);
+}
+.slide-left-enter-from {
+  opacity: 0;
+  transform: translateX(60px);
+}
+.slide-left-leave-to {
+  opacity: 0;
+  transform: translateX(-60px);
+}
+
+/* Slide-right: previous release (content slides right) */
+.slide-right-enter-active,
+.slide-right-leave-active {
+  transition: transform 250ms cubic-bezier(0.22, 1, 0.36, 1), opacity 250ms cubic-bezier(0.22, 1, 0.36, 1);
+}
+.slide-right-enter-from {
+  opacity: 0;
+  transform: translateX(-60px);
+}
+.slide-right-leave-to {
+  opacity: 0;
+  transform: translateX(60px);
 }
 </style>

@@ -57,6 +57,7 @@ const filters = [
   { value: 'album' as const, label: 'music.filter_album' },
   { value: 'ep' as const, label: 'music.filter_ep' },
   { value: 'single' as const, label: 'music.filter_single' },
+  { value: 'collaboration' as const, label: 'music.filter_collaboration' },
 ]
 
 const filteredReleases = computed(() => {

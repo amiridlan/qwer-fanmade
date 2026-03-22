@@ -43,6 +43,11 @@ const router = createRouter({
       component: () => import('@/views/BawigeView.vue'),
     },
     {
+      path: '/awards',
+      name: 'awards',
+      component: () => import('@/views/AwardsView.vue'),
+    },
+    {
       path: '/about',
       name: 'about',
       component: () => import('@/views/AboutView.vue'),

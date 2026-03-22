@@ -6,22 +6,26 @@
            hover:border-qwer-crimson/40 hover:shadow-[0_0_20px_-6px_rgba(193,39,45,0.25)]
            hover:scale-[1.02]"
   >
-    <!-- Cover art placeholder -->
+    <!-- Cover art -->
     <div class="aspect-square w-full bg-qwer-black/60 flex items-center justify-center relative overflow-hidden">
-      <div class="text-center">
+      <img
+        v-if="release.coverImage"
+        :src="release.coverImage"
+        :alt="localized(release.title)"
+        class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+        loading="lazy"
+      />
+      <div v-else class="text-center">
         <span class="font-display text-4xl sm:text-5xl tracking-display text-qwer-crimson/20
                      group-hover:text-qwer-crimson/35 transition-colors duration-200">
           QWER
         </span>
       </div>
-      <!-- Type badge overlay -->
-      <div class="absolute top-3 right-3">
-        <QwBadge variant="crimson">{{ release.type }}</QwBadge>
-      </div>
     </div>
 
     <!-- Info -->
     <div class="p-4">
+      <QwBadge variant="crimson" class="mb-2">{{ release.type }}</QwBadge>
       <h3 class="font-display text-lg tracking-heading text-qwer-white group-hover:text-qwer-crimson
                  transition-colors duration-hover truncate">
         {{ localized(release.title) }}

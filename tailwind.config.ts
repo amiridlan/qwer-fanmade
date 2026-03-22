@@ -12,12 +12,12 @@ export default {
           crimson: '#C1272D',
           black:   '#0D0D0D',
           white:   '#F4F0E8',
-          gray:    '#888888',
-          stage:   '#1A1A2E',
+          gray:    '#8E8889',
+          stage:   '#1A1826',
           // Accent
-          pink:    '#E84B6A',
-          purple:  '#8B3EC8',
-          amber:   '#F5A623',
+          pink:    '#D4637A',
+          purple:  '#8B6DAE',
+          amber:   '#D4A54A',
         },
         member: {
           chodan:  '#D8D8D8',

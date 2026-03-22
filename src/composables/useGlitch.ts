@@ -36,7 +36,7 @@ export function useGlitch(
       ease: 'power4.in',
     })
     .to(el, {
-      textShadow: '-2px 0 #E84B6A, 2px 0 #3DAF68',
+      textShadow: '-2px 0 #D4637A, 2px 0 #3DAF68',
       skewX: -1,
       duration: duration * 0.3,
       ease: 'none',

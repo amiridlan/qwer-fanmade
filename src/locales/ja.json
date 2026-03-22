@@ -5,6 +5,7 @@
     "music": "音楽",
     "live": "ライブ",
     "bawige": "バウィゲ",
+    "awards": "受賞",
     "about": "概要"
   },
   "hero": {
@@ -29,6 +30,9 @@
     "filter_album": "アルバム",
     "filter_ep": "EP",
     "filter_single": "シングル",
+    "filter_collaboration": "コラボ",
+    "latest": "最新リリース",
+    "view_all_releases": "全リリースを見る",
     "tracklist": "トラックリスト",
     "credits": "クレジット",
     "view_release": "リリースを見る",
@@ -69,6 +73,11 @@
     "disclaimer": "ファンメイドサイト · QWERまたはタマゴプロダクションとは無関係 · QWER © 3Y Corporation",
     "fan_note": "バウィゲコミュニティが愛を込めて制作",
     "connect": "つながる"
+  },
+  "awards": {
+    "eyebrow": "実績",
+    "title": "受賞歴",
+    "total": "件の受賞"
   },
   "common": {
     "previous": "前へ",

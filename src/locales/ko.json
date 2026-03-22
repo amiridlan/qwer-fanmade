@@ -5,6 +5,7 @@
     "music": "음악",
     "live": "라이브",
     "bawige": "바위게",
+    "awards": "수상",
     "about": "소개"
   },
   "hero": {
@@ -29,6 +30,9 @@
     "filter_album": "앨범",
     "filter_ep": "EP",
     "filter_single": "싱글",
+    "filter_collaboration": "콜라보",
+    "latest": "최신 발매",
+    "view_all_releases": "전체 발매작 보기",
     "tracklist": "트랙리스트",
     "credits": "크레딧",
     "view_release": "발매작 보기",
@@ -69,6 +73,11 @@
     "disclaimer": "팬 제작 사이트 · QWER 또는 타마고 프로덕션과 무관 · QWER © 3Y Corporation",
     "fan_note": "바위게 커뮤니티가 사랑을 담아 만들었습니다",
     "connect": "연결"
+  },
+  "awards": {
+    "eyebrow": "업적",
+    "title": "수상 내역",
+    "total": "개 수상"
   },
   "common": {
     "previous": "이전",

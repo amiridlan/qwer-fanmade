@@ -60,6 +60,7 @@ const navLinks = [
   { to: '/members', label: 'nav.members' },
   { to: '/music', label: 'nav.music' },
   { to: '/live', label: 'nav.live' },
+  { to: '/awards', label: 'nav.awards' },
   { to: '/bawige', label: 'nav.bawige' },
   { to: '/about', label: 'nav.about' },
 ]
