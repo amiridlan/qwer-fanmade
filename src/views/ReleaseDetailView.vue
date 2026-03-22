@@ -30,7 +30,7 @@
                   :src="release.coverImage"
                   :alt="localized(release.title)"
                   class="w-full h-full object-cover"
-                  loading="lazy"
+                  fetchpriority="high"
                 />
                 <div v-else class="text-center">
                   <span class="font-display text-5xl tracking-display text-qwer-crimson/25">QWER</span>

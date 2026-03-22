@@ -10,7 +10,7 @@
     <div class="aspect-square w-full bg-qwer-black/60 flex items-center justify-center relative overflow-hidden">
       <img
         v-if="release.coverImage"
-        :src="release.coverImage"
+        :src="thumbUrl"
         :alt="localized(release.title)"
         class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
         loading="lazy"
@@ -43,11 +43,13 @@
 import { computed } from 'vue'
 import { RouterLink } from 'vue-router'
 import { useLanguage } from '@/composables/useLanguage'
+import { coverUrl } from '@/data/releases'
 import QwBadge from '@/components/shared/QwBadge.vue'
 import type { Release } from '@/types'
 
 const props = defineProps<{ release: Release }>()
 const { localized } = useLanguage()
 
+const thumbUrl = computed(() => coverUrl(props.release.coverImage, 300))
 const releaseYear = computed(() => new Date(props.release.releaseDate).getFullYear())
 </script>

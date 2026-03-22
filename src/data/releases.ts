@@ -426,3 +426,9 @@ export const getReleaseBySlug = (slug: string): Release | undefined =>
   releases.find(r => r.slug === slug)
 
 export const getLatestRelease = (): Release => releasesSorted[0]
+
+/** Resize an iTunes artwork URL to the given dimension. YouTube thumbnails pass through unchanged. */
+export function coverUrl(url: string | undefined, size: number): string | undefined {
+  if (!url) return undefined
+  return url.replace(/\/\d+x\d+bb\.jpg$/, `/${size}x${size}bb.jpg`)
+}
