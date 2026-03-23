@@ -44,13 +44,9 @@
   },
   "live": {
     "title": "ライブ",
-    "subtitle": "ステージで",
-    "upcoming": "今後のライブ",
-    "past": "過去のライブ",
-    "no_upcoming": "予定されているライブはありません。後ほど確認してください。",
-    "tickets": "チケット",
-    "cancelled": "キャンセル",
-    "world_tour": "ワールドツアー 2025"
+    "subtitle": "公式パフォーマンス",
+    "latest_performance": "最新パフォーマンス",
+    "watch_all": "すべてのパフォーマンスを見る"
   },
   "bawige": {
     "title": "バウィゲ",

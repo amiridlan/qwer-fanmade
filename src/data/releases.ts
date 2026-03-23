@@ -112,6 +112,35 @@ export const releases: Release[] = [
     },
   },
   {
+    slug: 'halftime',
+    title: {
+      en: 'Halftime',
+      ko: 'Halftime',
+      ms: 'Halftime',
+      ja: 'Halftime',
+    },
+    type: 'collaboration',
+    releaseDate: '2024-11-21',
+    coverImage: 'https://img.youtube.com/vi/7qRCUAQ_XC8/maxresdefault.jpg',
+    description: {
+      en: 'QWER × EA SPORTS FC Online collaboration track, part of the "최애의 OST" (My Favorite OST) series for FC Online.',
+      ko: 'QWER × EA SPORTS FC온라인 콜라보레이션 트랙. FC온라인 "최애의 OST" 시리즈의 일환으로 제작되었습니다.',
+      ms: 'Lagu kolaborasi QWER × EA SPORTS FC Online, sebahagian daripada siri "최애의 OST" (OST Kegemaran Saya) untuk FC Online.',
+      ja: 'QWER × EA SPORTS FCオンラインのコラボトラック。FCオンライン「最愛のOST」シリーズの一環として制作されました。',
+    },
+    tracks: [
+      {
+        number: 1,
+        title: { en: 'Halftime', ko: 'Halftime', ms: 'Halftime', ja: 'Halftime' },
+        duration: '3:20',
+        musicVideoUrl: 'https://www.youtube.com/watch?v=7qRCUAQ_XC8',
+      },
+    ],
+    streaming: {
+      youtube: 'https://www.youtube.com/watch?v=7qRCUAQ_XC8',
+    },
+  },
+  {
     slug: 'discord-japanese-ver',
     title: {
       en: 'Discord (Japanese Ver.)',

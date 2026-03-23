@@ -44,13 +44,9 @@
   },
   "live": {
     "title": "Pentas",
-    "subtitle": "Di atas pentas",
-    "upcoming": "Konsert Akan Datang",
-    "past": "Konsert Lalu",
-    "no_upcoming": "Tiada konsert akan datang. Semak semula nanti.",
-    "tickets": "Tiket",
-    "cancelled": "Dibatalkan",
-    "world_tour": "Jelajah Dunia 2025"
+    "subtitle": "Persembahan Rasmi",
+    "latest_performance": "Persembahan Terkini",
+    "watch_all": "Tonton Semua Persembahan"
   },
   "bawige": {
     "title": "Bawige",

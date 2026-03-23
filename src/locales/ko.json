@@ -44,13 +44,9 @@
   },
   "live": {
     "title": "라이브",
-    "subtitle": "무대 위에서",
-    "upcoming": "예정된 공연",
-    "past": "지난 공연",
-    "no_upcoming": "예정된 공연이 없습니다. 곧 업데이트될 예정입니다.",
-    "tickets": "티켓",
-    "cancelled": "취소됨",
-    "world_tour": "월드 투어 2025"
+    "subtitle": "공식 퍼포먼스",
+    "latest_performance": "최신 퍼포먼스",
+    "watch_all": "모든 퍼포먼스 보기"
   },
   "bawige": {
     "title": "바위게",

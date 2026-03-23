@@ -44,13 +44,9 @@
   },
   "live": {
     "title": "Live",
-    "subtitle": "On stage",
-    "upcoming": "Upcoming Shows",
-    "past": "Past Shows",
-    "no_upcoming": "No upcoming shows. Check back soon.",
-    "tickets": "Tickets",
-    "cancelled": "Cancelled",
-    "world_tour": "World Tour 2025"
+    "subtitle": "Official Performances",
+    "latest_performance": "Latest Performance",
+    "watch_all": "Watch All Performances"
   },
   "bawige": {
     "title": "Bawige",

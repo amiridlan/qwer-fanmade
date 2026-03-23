@@ -80,6 +80,14 @@ export interface Show {
   tourName?: string
 }
 
+// ─── Performances ────────────────────────────────────────────────────────────
+export interface Performance {
+  id: string
+  title: LocalizedString
+  youtubeId: string
+  date: string // ISO date string
+}
+
 // ─── Timeline ─────────────────────────────────────────────────────────────────
 export interface TimelineItem {
   id: string

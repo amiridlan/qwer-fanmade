@@ -1,63 +1,49 @@
 <template>
   <section class="py-20 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
     <SectionHeader
-      :eyebrow="t('live.title')"
-      :title="worldTourShows.length ? 'Rockation' : t('live.upcoming')"
-      :subtitle="worldTourShows.length ? 'World Tour 2025' : undefined"
+      :title="t('live.latest_performance')"
       centered
     />
 
-    <!-- Upcoming shows list -->
-    <div v-if="nextShows.length" ref="showsRef" class="mt-10 max-w-2xl mx-auto space-y-3">
+    <!-- Latest performance thumbnail -->
+    <div ref="perfRef" class="mt-10 max-w-3xl mx-auto">
       <RouterLink
-        v-for="show in nextShows"
-        :key="show.id"
         to="/live"
-        class="group flex items-center gap-4 sm:gap-6 p-4 rounded-sm border border-white/5
-               bg-qwer-stage/30 hover:border-qwer-crimson/40 transition-all duration-hover"
+        class="group relative block aspect-video overflow-hidden border border-white/6
+               hover:border-qwer-crimson/30 transition-all duration-200"
       >
-        <!-- Date -->
-        <div class="shrink-0 text-center w-14">
-          <p class="font-display text-2xl tracking-heading text-qwer-crimson leading-none">
-            {{ formatDay(show.date) }}
-          </p>
-          <p class="label-meta text-[9px] mt-0.5">
-            {{ formatMonth(show.date) }}
-          </p>
+        <img
+          :src="`https://img.youtube.com/vi/${latest.youtubeId}/maxresdefault.jpg`"
+          :alt="localized(latest.title)"
+          class="w-full h-full object-cover transition-transform duration-300
+                 group-hover:scale-[1.02]"
+        />
+        <div class="absolute inset-0 bg-qwer-black/30 group-hover:bg-qwer-black/10 transition-colors duration-200" />
+
+        <!-- Play icon -->
+        <div class="absolute inset-0 flex items-center justify-center">
+          <div class="w-16 h-16 sm:w-20 sm:h-20 rounded-full bg-qwer-crimson/90 backdrop-blur-sm
+                      flex items-center justify-center transition-all duration-200
+                      group-hover:scale-110 group-hover:bg-qwer-crimson
+                      shadow-[0_0_30px_rgba(193,39,45,0.3)] group-hover:shadow-[0_0_40px_rgba(193,39,45,0.5)]">
+            <svg class="w-6 h-6 sm:w-8 sm:h-8 text-qwer-white ml-1" viewBox="0 0 24 24" fill="currentColor">
+              <path d="M8 5v14l11-7z" />
+            </svg>
+          </div>
         </div>
 
-        <!-- Divider -->
-        <div class="w-px h-10 bg-white/10" />
-
-        <!-- Info -->
-        <div class="flex-1 min-w-0">
-          <p class="text-sm text-qwer-white font-medium truncate">
-            {{ show.venue }}
-          </p>
-          <p class="text-xs text-qwer-gray truncate">
-            {{ localized(show.city) }}, {{ localized(show.country) }}
-          </p>
+        <!-- Title bar -->
+        <div class="absolute inset-x-0 bottom-0 px-4 py-3 bg-gradient-to-t from-qwer-black/80 to-transparent">
+          <h3 class="font-display text-base sm:text-lg tracking-heading text-qwer-white truncate">
+            {{ localized(latest.title) }}
+          </h3>
         </div>
-
-        <!-- Tour badge -->
-        <QwBadge v-if="show.isWorldTour" variant="crimson">
-          {{ show.tourName }}
-        </QwBadge>
-
-        <!-- Arrow -->
-        <span class="text-qwer-gray/40 group-hover:text-qwer-crimson transition-colors duration-hover shrink-0">
-          &rarr;
-        </span>
       </RouterLink>
     </div>
 
-    <p v-else class="mt-10 text-center text-sm text-qwer-gray">
-      {{ t('live.no_upcoming') }}
-    </p>
-
     <div class="mt-10 text-center">
       <QwButton variant="ghost" to="/live">
-        {{ t('nav.live') }}
+        {{ t('live.watch_all') }}
       </QwButton>
     </div>
   </section>
@@ -68,23 +54,14 @@ import { ref } from 'vue'
 import { RouterLink } from 'vue-router'
 import { useLanguage } from '@/composables/useLanguage'
 import { useScrollReveal } from '@/composables/useScrollReveal'
-import { upcomingShows, worldTourShows } from '@/data/shows'
+import { latestPerformance } from '@/data/performances'
 import SectionHeader from '@/components/shared/SectionHeader.vue'
-import QwBadge from '@/components/shared/QwBadge.vue'
 import QwButton from '@/components/shared/QwButton.vue'
 
 const { t, localized } = useLanguage()
 
-const showsRef = ref<HTMLElement | null>(null)
-useScrollReveal(showsRef, { stagger: 0.08, y: 20 })
+const perfRef = ref<HTMLElement | null>(null)
+useScrollReveal(perfRef, { y: 20 })
 
-const nextShows = upcomingShows.slice(0, 4)
-
-function formatDay(dateStr: string): string {
-  return new Date(dateStr).getDate().toString()
-}
-
-function formatMonth(dateStr: string): string {
-  return new Date(dateStr).toLocaleDateString('en', { month: 'short' }).toUpperCase()
-}
+const latest = latestPerformance
 </script>
