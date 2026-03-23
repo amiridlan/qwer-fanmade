@@ -12,9 +12,9 @@
         <!-- Logo -->
         <RouterLink
           to="/"
-          class="font-display text-xl tracking-display text-qwer-white hover:text-qwer-crimson transition-colors duration-hover"
+          class="block hover:opacity-80 transition-opacity duration-hover"
         >
-          QWER
+          <img :src="`${base}images/logo/logo.svg`" alt="QWER" class="h-8" />
         </RouterLink>
 
         <!-- Desktop nav -->
@@ -82,6 +82,7 @@ import { useLanguage } from '@/composables/useLanguage'
 import LanguageToggle from '@/components/shared/LanguageToggle.vue'
 import MobileNav from '@/components/layout/MobileNav.vue'
 
+const base = import.meta.env.BASE_URL
 const { t } = useLanguage()
 const route = useRoute()
 

@@ -1,0 +1,92 @@
+flowchart LR
+  subgraph DATA["Data Layer (src/data/)"]
+    MEMBERS_DATA["members.ts<br/>members[], getMemberBySlug()"]
+    RELEASES_DATA["releases.ts<br/>releases[], releasesSorted[],<br/>getReleaseBySlug(),<br/>getLatestRelease(), coverUrl()"]
+    SHOWS_DATA["shows.ts<br/>shows[], upcomingShows[],<br/>pastShows[], worldTourShows[],<br/>getNextShow()"]
+    AWARDS_DATA["awards.ts<br/>awards[], awardsSorted[]"]
+    TIMELINE_DATA["timeline.ts<br/>timeline[], timelineSorted[]"]
+    FANDOM_DATA["fandom.ts<br/>fandom: FandomData"]
+  end
+
+  subgraph TYPES["Type Definitions (src/types/)"]
+    TS["index.ts<br/>Locale, LocalizedString,<br/>Member, Release, Show,<br/>Award, TimelineItem,<br/>FandomData"]
+  end
+
+  subgraph LOCALES["Locale Files (src/locales/)"]
+    EN["en.json"]
+    KO["ko.json"]
+    MS["ms.json"]
+    JA["ja.json"]
+  end
+
+  subgraph COMPOSABLES["Composables (src/composables/)"]
+    USE_LANG["useLanguage<br/>t(), localized(),<br/>currentLocale, setLocale()"]
+    USE_HEAD["useHead<br/>document.title, meta"]
+    USE_MEMBER_COLOR["useMemberColor<br/>color, cssVars"]
+    USE_SCROLL["useScrollReveal<br/>GSAP scroll animations"]
+    USE_AUDIO["useAudioPlayer<br/>play(), pause(), seek()"]
+    USE_GLITCH["useGlitch<br/>GSAP glitch text effect"]
+  end
+
+  subgraph VIEWS["Views"]
+    HOME["HomeView"]
+    MEMBERS_V["MembersView"]
+    MEMBER_D["MemberDetailView"]
+    MUSIC_V["MusicView"]
+    RELEASE_D["ReleaseDetailView"]
+    LIVE_V["LiveView"]
+    AWARDS_V["AwardsView"]
+    BAWIGE_V["BawigeView"]
+    ABOUT_V["AboutView"]
+  end
+
+  subgraph EXTERNAL["External CDN"]
+    ITUNES["iTunes CDN<br/>is1-ssl.mzstatic.com<br/>Album artwork"]
+    YOUTUBE["YouTube CDN<br/>img.youtube.com<br/>Video thumbnails"]
+  end
+
+  subgraph STORAGE["Browser Storage"]
+    LS["localStorage<br/>locale preference"]
+  end
+
+  %% --- Type system feeds everything ---
+  TS -.-> DATA
+
+  %% --- Locale files feed composable ---
+  EN --> USE_LANG
+  KO --> USE_LANG
+  MS --> USE_LANG
+  JA --> USE_LANG
+  USE_LANG <--> LS
+
+  %% --- Composable → View connections ---
+  USE_LANG --> HOME & MEMBERS_V & MEMBER_D & MUSIC_V & RELEASE_D & LIVE_V & AWARDS_V & BAWIGE_V & ABOUT_V
+  USE_HEAD --> HOME & MEMBERS_V & MUSIC_V & RELEASE_D & LIVE_V & AWARDS_V & BAWIGE_V & ABOUT_V
+  USE_MEMBER_COLOR --> MEMBER_D
+  USE_SCROLL --> HOME
+  USE_GLITCH --> HOME
+  USE_AUDIO --> HOME
+
+  %% --- Data → View connections ---
+  MEMBERS_DATA --> MEMBERS_V & MEMBER_D & HOME
+  RELEASES_DATA --> MUSIC_V & RELEASE_D & HOME
+  SHOWS_DATA --> LIVE_V & HOME
+  AWARDS_DATA --> AWARDS_V
+  TIMELINE_DATA --> ABOUT_V
+  FANDOM_DATA --> BAWIGE_V
+
+  %% --- External CDN → Views ---
+  ITUNES --> MUSIC_V & RELEASE_D & HOME
+  YOUTUBE --> MUSIC_V & RELEASE_D
+
+  %% --- Route params ---
+  ROUTE_PARAMS(("Route Params<br/>:slug")) --> MEMBER_D & RELEASE_D
+
+  %% --- Styling ---
+  style DATA fill:#1A1826,color:#D4A54A,stroke:#D4A54A
+  style TYPES fill:#1A1826,color:#8B6DAE,stroke:#8B6DAE
+  style LOCALES fill:#1A1826,color:#D4637A,stroke:#D4637A
+  style COMPOSABLES fill:#1A1826,color:#D4637A,stroke:#D4637A
+  style VIEWS fill:#1A1826,color:#F4F0E8,stroke:#C1272D
+  style EXTERNAL fill:#0D0D0D,color:#8E8889,stroke:#8E8889
+  style STORAGE fill:#0D0D0D,color:#8E8889,stroke:#8E8889

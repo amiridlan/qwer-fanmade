@@ -9,20 +9,16 @@
       clipPath: clipPath,
     }"
   >
-    <!-- Full-bleed image placeholder -->
-    <div
-      class="absolute inset-0 bg-qwer-black/80 transition-all duration-300
-             group-hover:bg-qwer-black/50"
-    >
-      <span
-        class="absolute inset-0 flex items-center justify-center
-               font-display tracking-display opacity-10 transition-opacity duration-300
-               group-hover:opacity-25 select-none"
-        :class="'text-[12rem] sm:text-[16rem] lg:text-[20rem]'"
-        :style="{ color: member.color }"
-      >
-        {{ member.name.en.charAt(0) }}
-      </span>
+    <!-- Full-bleed member image -->
+    <div class="absolute inset-0">
+      <img
+        :src="`${base}images/members/${member.slug}.jpg`"
+        :alt="member.name.en"
+        class="w-full h-full object-cover transition-transform duration-500
+               group-hover:scale-105"
+      />
+      <div class="absolute inset-0 bg-qwer-black/40 transition-all duration-300
+                  group-hover:bg-qwer-black/20" />
     </div>
 
     <!-- Bottom gradient overlay -->
@@ -60,6 +56,7 @@ const props = defineProps<{
   total: number
 }>()
 
+const base = import.meta.env.BASE_URL
 const { localized } = useLanguage()
 
 const clipPath = computed(() => {

@@ -1,0 +1,98 @@
+graph TD
+  APP["App.vue"]
+
+  %% --- Layout ---
+  APP --> HEADER["AppHeader"]
+  APP --> ROUTER_VIEW["RouterView<br/>(Page Transitions)"]
+  APP --> FOOTER["AppFooter"]
+  APP --> AUDIO["AudioPlayer"]
+
+  HEADER --> LANG_TOGGLE["LanguageToggle"]
+  HEADER --> MOBILE_NAV["MobileNav"]
+  FOOTER --> FAN_DISC_F["FanDisclaimer"]
+
+  AUDIO --> WAVEFORM["WaveformVisualizer"]
+
+  %% --- Views ---
+  ROUTER_VIEW --> HOME_VIEW["HomeView"]
+  ROUTER_VIEW --> MEMBERS_VIEW["MembersView"]
+  ROUTER_VIEW --> MEMBER_DETAIL_VIEW["MemberDetailView"]
+  ROUTER_VIEW --> MUSIC_VIEW["MusicView"]
+  ROUTER_VIEW --> RELEASE_DETAIL_VIEW["ReleaseDetailView"]
+  ROUTER_VIEW --> LIVE_VIEW["LiveView"]
+  ROUTER_VIEW --> AWARDS_VIEW["AwardsView"]
+  ROUTER_VIEW --> BAWIGE_VIEW["BawigeView"]
+  ROUTER_VIEW --> ABOUT_VIEW["AboutView"]
+  ROUTER_VIEW --> NOT_FOUND_VIEW["NotFoundView"]
+
+  %% --- HomeView children ---
+  HOME_VIEW --> HERO["HeroSection"]
+  HOME_VIEW --> LATEST["LatestReleaseTeaser"]
+  HOME_VIEW --> MEMBERS_PREV["MembersPreview"]
+  HOME_VIEW --> TOUR_TEASER["TourTeaser"]
+  HOME_VIEW --> DIVIDER_H["QwDivider"]
+
+  HERO --> BTN_HERO["QwButton ×2"]
+  LATEST --> COVER_LT["CoverImage"]
+  LATEST --> SECTION_HDR_LT["SectionHeader"]
+  LATEST --> BADGE_LT["QwBadge"]
+  LATEST --> BTN_LT["QwButton"]
+  MEMBERS_PREV --> SECTION_HDR_MP["SectionHeader"]
+  MEMBERS_PREV --> CARD_MP["MemberCard ×4"]
+  MEMBERS_PREV --> BTN_MP["QwButton"]
+
+  %% --- MembersView children ---
+  MEMBERS_VIEW --> SECTION_HDR_MV["SectionHeader"]
+  MEMBERS_VIEW --> CARD_MV["MemberCard ×4"]
+
+  %% --- MemberDetailView children ---
+  MEMBER_DETAIL_VIEW --> BADGE_MD["QwBadge"]
+  MEMBER_DETAIL_VIEW --> BTN_MD["QwButton"]
+
+  %% --- MusicView children ---
+  MUSIC_VIEW --> SECTION_HDR_MU["SectionHeader"]
+  MUSIC_VIEW --> RELEASE_CARD["ReleaseCard ×N"]
+  RELEASE_CARD --> COVER_RC["CoverImage"]
+  RELEASE_CARD --> BADGE_RC["QwBadge"]
+
+  %% --- ReleaseDetailView children ---
+  RELEASE_DETAIL_VIEW --> COVER_RD["CoverImage"]
+  RELEASE_DETAIL_VIEW --> BADGE_RD["QwBadge"]
+  RELEASE_DETAIL_VIEW --> BTN_RD["QwButton"]
+  RELEASE_DETAIL_VIEW --> STREAMING["StreamingLinks"]
+  RELEASE_DETAIL_VIEW --> TRACKLIST["TrackList"]
+
+  %% --- LiveView children ---
+  LIVE_VIEW --> SECTION_HDR_LV["SectionHeader"]
+  LIVE_VIEW --> TOUR_BANNER["TourBanner"]
+  LIVE_VIEW --> SHOW_CARD["ShowCard ×N"]
+
+  %% --- BawigeView children ---
+  BAWIGE_VIEW --> DIVIDER_B["QwDivider"]
+  BAWIGE_VIEW --> FAN_DISC_B["FanDisclaimer"]
+
+  %% --- AboutView children ---
+  ABOUT_VIEW --> TIMELINE_ITEM["TimelineItem ×N"]
+  ABOUT_VIEW --> DIVIDER_A["QwDivider"]
+  ABOUT_VIEW --> FAN_DISC_A["FanDisclaimer"]
+
+  %% --- NotFoundView children ---
+  NOT_FOUND_VIEW --> BTN_NF["QwButton"]
+
+  %% --- Styling ---
+  style APP fill:#C1272D,color:#F4F0E8,stroke:#C1272D
+  style HEADER fill:#1A1826,color:#F4F0E8,stroke:#8E8889
+  style FOOTER fill:#1A1826,color:#F4F0E8,stroke:#8E8889
+  style AUDIO fill:#1A1826,color:#F4F0E8,stroke:#8E8889
+  style ROUTER_VIEW fill:#C1272D,color:#F4F0E8,stroke:#C1272D
+
+  style HOME_VIEW fill:#1A1826,color:#F4F0E8,stroke:#D4637A
+  style MEMBERS_VIEW fill:#1A1826,color:#F4F0E8,stroke:#D4637A
+  style MEMBER_DETAIL_VIEW fill:#1A1826,color:#F4F0E8,stroke:#D4637A
+  style MUSIC_VIEW fill:#1A1826,color:#F4F0E8,stroke:#D4637A
+  style RELEASE_DETAIL_VIEW fill:#1A1826,color:#F4F0E8,stroke:#D4637A
+  style LIVE_VIEW fill:#1A1826,color:#F4F0E8,stroke:#D4637A
+  style AWARDS_VIEW fill:#1A1826,color:#F4F0E8,stroke:#D4637A
+  style BAWIGE_VIEW fill:#1A1826,color:#F4F0E8,stroke:#D4637A
+  style ABOUT_VIEW fill:#1A1826,color:#F4F0E8,stroke:#D4637A
+  style NOT_FOUND_VIEW fill:#1A1826,color:#F4F0E8,stroke:#8E8889

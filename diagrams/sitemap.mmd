@@ -1,0 +1,42 @@
+graph TD
+  ROOT["🌐 QWER Fan Site"]
+
+  ROOT --> HOME["/ <br/> Home"]
+  ROOT --> MEMBERS["/members <br/> Members"]
+  ROOT --> MUSIC["/music <br/> Discography"]
+  ROOT --> LIVE["/live <br/> Live"]
+  ROOT --> AWARDS["/awards <br/> Awards"]
+  ROOT --> BAWIGE["/bawige <br/> Bawige (Fandom)"]
+  ROOT --> ABOUT["/about <br/> About"]
+  ROOT --> NOTFOUND["/* <br/> 404"]
+
+  MEMBERS --> MEMBER_DETAIL["/members/:slug <br/> Member Detail"]
+  MEMBER_DETAIL --> CHODAN["chodan"]
+  MEMBER_DETAIL --> MAGENTA["magenta"]
+  MEMBER_DETAIL --> HINA["hina"]
+  MEMBER_DETAIL --> SIYEON["siyeon"]
+
+  MUSIC --> RELEASE_DETAIL["/music/:slug <br/> Release Detail"]
+  RELEASE_DETAIL --> R1["blue-whale"]
+  RELEASE_DETAIL --> R2["in-a-million-noises"]
+  RELEASE_DETAIL --> R3["play-we-dew"]
+  RELEASE_DETAIL --> R4["discord-japanese-ver"]
+  RELEASE_DETAIL --> R5["youth-promise"]
+  RELEASE_DETAIL --> R6["algorithms-blossom"]
+  RELEASE_DETAIL --> R7["fake-idol"]
+  RELEASE_DETAIL --> R8["anima-power"]
+  RELEASE_DETAIL --> R9["manito"]
+  RELEASE_DETAIL --> R10["discord-tak-remix"]
+  RELEASE_DETAIL --> R11["harmony-from-discord"]
+
+  style ROOT fill:#C1272D,color:#F4F0E8,stroke:#C1272D
+  style HOME fill:#1A1826,color:#F4F0E8,stroke:#C1272D
+  style MEMBERS fill:#1A1826,color:#F4F0E8,stroke:#C1272D
+  style MUSIC fill:#1A1826,color:#F4F0E8,stroke:#C1272D
+  style LIVE fill:#1A1826,color:#F4F0E8,stroke:#C1272D
+  style AWARDS fill:#1A1826,color:#F4F0E8,stroke:#C1272D
+  style BAWIGE fill:#1A1826,color:#F4F0E8,stroke:#C1272D
+  style ABOUT fill:#1A1826,color:#F4F0E8,stroke:#C1272D
+  style NOTFOUND fill:#1A1826,color:#8E8889,stroke:#8E8889
+  style MEMBER_DETAIL fill:#0D0D0D,color:#D4637A,stroke:#D4637A
+  style RELEASE_DETAIL fill:#0D0D0D,color:#D4A54A,stroke:#D4A54A

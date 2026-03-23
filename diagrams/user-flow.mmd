@@ -1,0 +1,73 @@
+flowchart TD
+  START(("User visits site"))
+
+  START --> HOME["Home Page"]
+
+  %% --- Home Page Flows ---
+  HOME --> |"Hero CTA: Latest Release"| MUSIC
+  HOME --> |"Hero CTA: Tour Dates"| LIVE
+  HOME --> |"Latest Release Teaser → View All Releases"| MUSIC
+  HOME --> |"Members Preview → Click card"| MEMBER_DETAIL
+  HOME --> |"Tour Teaser → View Shows"| LIVE
+  HOME --> |"Navbar link"| NAV_CHOICE
+
+  %% --- Navbar ---
+  NAV_CHOICE{"Navbar"}
+  NAV_CHOICE --> HOME
+  NAV_CHOICE --> MEMBERS
+  NAV_CHOICE --> MUSIC
+  NAV_CHOICE --> LIVE
+  NAV_CHOICE --> AWARDS
+  NAV_CHOICE --> BAWIGE
+  NAV_CHOICE --> ABOUT
+
+  %% --- Members Flow ---
+  MEMBERS["Members Page"] --> |"Click member card"| MEMBER_DETAIL
+  MEMBER_DETAIL["Member Detail"] --> |"← Back to Members"| MEMBERS
+  MEMBER_DETAIL --> |"Social links"| EXT_SOCIAL(("External: Instagram / Twitter / YouTube"))
+  MEMBER_DETAIL --> |"Prev / Next member"| MEMBER_DETAIL
+
+  %% --- Music Flow ---
+  MUSIC["Discography Page"] --> |"Filter tabs"| FILTER_RELEASES{"Filter: All / Album / EP / Single / Collab"}
+  FILTER_RELEASES --> MUSIC
+  MUSIC --> |"Click release card"| RELEASE_DETAIL
+  RELEASE_DETAIL["Release Detail"] --> |"← Back to Discography"| MUSIC
+  RELEASE_DETAIL --> |"Prev / Next release (slide)"| RELEASE_DETAIL
+  RELEASE_DETAIL --> |"Streaming link"| EXT_STREAM(("External: YouTube / Spotify"))
+  RELEASE_DETAIL --> |"Track MV link"| EXT_STREAM
+
+  %% --- Live Flow ---
+  LIVE["Live Page"] --> |"Buy Tickets"| EXT_TICKET(("External: Ticket Site"))
+  LIVE --> |"Toggle past shows"| LIVE
+
+  %% --- Awards Flow ---
+  AWARDS["Awards Page"] --> |"← → Arrow buttons"| AWARDS
+  AWARDS --> |"Keyboard L/R arrows"| AWARDS
+  AWARDS --> |"Click dot indicator"| AWARDS
+
+  %% --- Bawige Flow ---
+  BAWIGE["Bawige (Fandom)"] --> |"Official links"| EXT_OFFICIAL(("External: YouTube / Daum"))
+  BAWIGE --> |"Community links"| EXT_COMMUNITY(("External: Reddit / Discord"))
+
+  %% --- About Flow ---
+  ABOUT["About Page"] --> |"Scroll timeline"| ABOUT
+
+  %% --- Language Toggle (global) ---
+  LANG["🌐 Language Toggle<br/>EN → KO → MS → JA"]
+  HOME -.-> LANG
+  LANG -.-> |"Updates all text"| HOME
+
+  %% --- 404 ---
+  NOTFOUND["404 Page"] --> |"Go Home"| HOME
+
+  style START fill:#C1272D,color:#F4F0E8,stroke:#C1272D
+  style HOME fill:#1A1826,color:#F4F0E8,stroke:#C1272D
+  style MEMBERS fill:#1A1826,color:#F4F0E8,stroke:#C1272D
+  style MUSIC fill:#1A1826,color:#F4F0E8,stroke:#C1272D
+  style LIVE fill:#1A1826,color:#F4F0E8,stroke:#C1272D
+  style AWARDS fill:#1A1826,color:#F4F0E8,stroke:#C1272D
+  style BAWIGE fill:#1A1826,color:#F4F0E8,stroke:#C1272D
+  style ABOUT fill:#1A1826,color:#F4F0E8,stroke:#C1272D
+  style MEMBER_DETAIL fill:#0D0D0D,color:#D4637A,stroke:#D4637A
+  style RELEASE_DETAIL fill:#0D0D0D,color:#D4A54A,stroke:#D4A54A
+  style LANG fill:#8B6DAE,color:#F4F0E8,stroke:#8B6DAE

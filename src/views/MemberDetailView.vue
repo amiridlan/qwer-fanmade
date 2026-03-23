@@ -21,18 +21,17 @@
         </RouterLink>
 
         <div class="flex flex-col md:flex-row gap-10 items-start">
-          <!-- Member portrait placeholder -->
+          <!-- Member portrait -->
           <div
             class="shrink-0 w-48 sm:w-56 md:w-64 aspect-[3/4] rounded-sm border-2 bg-qwer-black/60
-                   flex items-center justify-center"
+                   overflow-hidden"
             :style="{ borderColor: color }"
           >
-            <span
-              class="font-display text-8xl tracking-display opacity-25"
-              :style="{ color }"
-            >
-              {{ member.name.en.charAt(0) }}
-            </span>
+            <img
+              :src="`${base}images/members/${member.slug}.jpg`"
+              :alt="member.name.en"
+              class="w-full h-full object-cover"
+            />
           </div>
 
           <!-- Info -->
@@ -170,6 +169,7 @@ import { members } from '@/data/members'
 import QwBadge from '@/components/shared/QwBadge.vue'
 import QwButton from '@/components/shared/QwButton.vue'
 
+const base = import.meta.env.BASE_URL
 const route = useRoute()
 const { t, localized } = useLanguage()
 
