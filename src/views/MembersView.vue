@@ -1,12 +1,11 @@
 <template>
   <div class="min-h-screen py-24 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
     <SectionHeader
-      :eyebrow="t('members.title')"
       :title="t('members.subtitle')"
       centered
     />
 
-    <div class="mt-12 flex h-[60vh] sm:h-[70vh] lg:h-[75vh] -mx-4 sm:-mx-6 lg:-mx-8">
+    <div class="mt-12 flex h-[60vh] sm:h-[70vh] lg:h-[75vh] -mx-4 sm:-mx-6 lg:-mx-8 border-2 border-qwer-crimson rounded-sm overflow-hidden">
       <MemberCard
         v-for="(member, i) in members"
         :key="member.slug"

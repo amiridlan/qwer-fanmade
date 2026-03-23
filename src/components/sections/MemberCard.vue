@@ -18,7 +18,7 @@
                group-hover:scale-105"
       />
       <div class="absolute inset-0 bg-qwer-black/40 transition-all duration-300
-                  group-hover:bg-qwer-black/20" />
+                  group-hover:bg-qwer-black/10" />
     </div>
 
     <!-- Bottom gradient overlay -->
@@ -38,7 +38,7 @@
     <div
       class="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none"
       :style="{
-        boxShadow: `inset 0 0 60px -20px ${member.color}, 0 0 30px -10px ${member.color}`,
+        boxShadow: `inset 0 0 80px -10px ${member.color}, 0 0 40px -5px ${member.color}`,
       }"
     />
   </RouterLink>

@@ -1,11 +1,13 @@
 <template>
   <RouterLink
     :to="`/music/${release.slug}`"
-    class="group block rounded-sm border border-white/10 bg-qwer-stage/30
-           transition-all duration-200 ease-snap-out overflow-hidden
-           hover:border-qwer-crimson/40 hover:shadow-[0_0_20px_-6px_rgba(193,39,45,0.25)]
-           hover:scale-[1.02]"
+    class="inv-slot group relative block overflow-hidden transition-all duration-200"
+    :style="{ '--rarity': rarityColor }"
   >
+    <!-- Slot border glow on hover -->
+    <div class="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-200 pointer-events-none
+                border border-[var(--rarity)] shadow-[inset_0_0_20px_-8px_var(--rarity),0_0_12px_-4px_var(--rarity)]" />
+
     <!-- Cover art -->
     <div class="aspect-square w-full relative overflow-hidden">
       <CoverImage
@@ -20,19 +22,27 @@
           QWER
         </span>
       </div>
+
+      <!-- Rarity stripe -->
+      <div class="absolute top-0 left-0 right-0 h-[2px]" :style="{ background: rarityColor }" />
     </div>
 
     <!-- Info -->
-    <div class="p-4">
-      <QwBadge variant="crimson" class="mb-2">{{ release.type }}</QwBadge>
-      <h3 class="font-display text-lg tracking-heading text-qwer-white group-hover:text-qwer-crimson
-                 transition-colors duration-hover truncate">
+    <div class="p-3 bg-qwer-black/40">
+      <span
+        class="inline-block text-[9px] tracking-meta uppercase px-1.5 py-0.5 mb-1.5 border"
+        :style="{ color: rarityColor, borderColor: rarityColor + '40' }"
+      >
+        {{ release.type }}
+      </span>
+      <h3 class="font-display text-sm sm:text-base tracking-heading text-qwer-white
+                 group-hover:text-[var(--rarity)] transition-colors duration-150 truncate">
         {{ localized(release.title) }}
       </h3>
-      <div class="mt-1 flex items-center gap-2 text-xs text-qwer-gray">
+      <div class="mt-1 flex items-center gap-2 text-[10px] text-qwer-gray/60 tracking-meta uppercase">
         <span>{{ releaseYear }}</span>
-        <span class="w-1 h-1 rounded-full bg-qwer-gray/40" />
-        <span>{{ release.tracks.length }} {{ release.tracks.length === 1 ? 'track' : 'tracks' }}</span>
+        <span class="text-qwer-gray/30">|</span>
+        <span>{{ release.tracks.length }}T</span>
       </div>
     </div>
   </RouterLink>
@@ -44,7 +54,6 @@ import { RouterLink } from 'vue-router'
 import { useLanguage } from '@/composables/useLanguage'
 import { coverUrl } from '@/data/releases'
 import CoverImage from '@/components/shared/CoverImage.vue'
-import QwBadge from '@/components/shared/QwBadge.vue'
 import type { Release } from '@/types'
 
 const props = defineProps<{ release: Release }>()
@@ -52,4 +61,25 @@ const { localized } = useLanguage()
 
 const thumbUrl = computed(() => coverUrl(props.release.coverImage, 300))
 const releaseYear = computed(() => new Date(props.release.releaseDate).getFullYear())
+
+const rarityColor = computed(() => {
+  switch (props.release.type) {
+    case 'album': return '#8B6DAE'       // rare — purple
+    case 'ep': return '#3DAF68'          // uncommon — green
+    case 'collaboration': return '#D4A54A' // legendary — gold
+    case 'single': return '#8E8889'      // common — gray
+    default: return '#8E8889'
+  }
+})
 </script>
+
+<style scoped>
+.inv-slot {
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  background: rgba(13, 13, 13, 0.5);
+}
+
+.inv-slot:hover {
+  background: rgba(13, 13, 13, 0.8);
+}
+</style>
