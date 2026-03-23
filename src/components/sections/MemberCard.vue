@@ -12,7 +12,7 @@
     <!-- Full-bleed member image -->
     <div class="absolute inset-0">
       <img
-        :src="`${base}images/members/${member.slug}.jpg`"
+        :src="`${base}images/members/${member.slug}.avif`"
         :alt="member.name.en"
         class="w-full h-full object-cover transition-transform duration-500
                group-hover:scale-105"

@@ -28,7 +28,7 @@
             :style="{ borderColor: color }"
           >
             <img
-              :src="`${base}images/members/${member.slug}.jpg`"
+              :src="`${base}images/members/${member.slug}.avif`"
               :alt="member.name.en"
               class="w-full h-full object-cover"
             />
