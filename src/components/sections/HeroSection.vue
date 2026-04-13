@@ -111,6 +111,14 @@ onMounted(() => {
   if (!svgRef.value) return
   const paths = svgRef.value.querySelectorAll<SVGPathElement>('.logo-path')
 
+  // Loading screen already played the animation this session — show final state immediately
+  if (sessionStorage.getItem('qwer-loading-shown')) {
+    paths.forEach((path) => {
+      gsap.set(path, { fillOpacity: 1, strokeOpacity: 0 })
+    })
+    return
+  }
+
   paths.forEach((path) => {
     const length = path.getTotalLength()
     gsap.set(path, {

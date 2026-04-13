@@ -1,5 +1,7 @@
 <template>
-  <div class="flex min-h-screen flex-col">
+  <LoadingScreen v-if="isLoading" @done="isLoading = false" />
+
+  <div v-show="!isLoading" class="flex min-h-screen flex-col">
     <!-- Skip to content (a11y) -->
     <a
       href="#main-content"
@@ -41,6 +43,9 @@ import { RouterView, type RouteLocationNormalizedLoaded } from 'vue-router'
 import AppHeader from '@/components/layout/AppHeader.vue'
 import AppFooter from '@/components/layout/AppFooter.vue'
 import AudioPlayer from '@/components/sections/AudioPlayer.vue'
+import LoadingScreen from '@/components/shared/LoadingScreen.vue'
+
+const isLoading = ref(sessionStorage.getItem('qwer-loading-shown') === null)
 
 const transitionName = ref('page')
 
