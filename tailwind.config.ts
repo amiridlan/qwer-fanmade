@@ -9,15 +9,15 @@ export default {
     extend: {
       colors: {
         qwer: {
-          crimson: '#C1272D',
-          black:   '#0D0D0D',
-          white:   '#F4F0E8',
-          gray:    '#8E8889',
-          stage:   '#1A1826',
+          crimson: '#FF5F6D',
+          black:   '#090F14',
+          white:   '#FDFAF0',
+          gray:    '#859099',
+          stage:   '#0D1B22',
           // Accent
-          pink:    '#D4637A',
-          purple:  '#8B6DAE',
-          amber:   '#D4A54A',
+          pink:    '#FF8FA3',
+          purple:  '#7E4FCB',
+          amber:   '#FFB347',
         },
         member: {
           chodan:  '#D8D8D8',

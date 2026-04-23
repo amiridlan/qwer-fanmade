@@ -2,9 +2,9 @@
   <div>
     <HeroSection />
     <QwDivider />
-    <LatestReleaseTeaser />
-    <QwDivider />
     <MembersPreview />
+    <QwDivider />
+    <LatestReleaseTeaser />
     <QwDivider />
     <TourTeaser />
   </div>

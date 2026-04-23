@@ -40,8 +40,8 @@
 
   /* Selection color */
   ::selection {
-    background-color: rgba(193, 39, 45, 0.4);
-    color: #F4F0E8;
+    background-color: rgba(255, 95, 109, 0.35);
+    color: #FDFAF0;
   }
 }
 
